@@ -1,2 +1,2 @@
 # Major_Project
-Nutrtiotonal Tracker is an assistant
+Nutritional Tracker is an assistant which will keep a tabs on your nutrients.
