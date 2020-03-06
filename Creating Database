@@ -11,3 +11,4 @@ On this database whole Project will work. It is classified into four different c
 On this database, product will do the calculations.
 
 First, it was created in the Excel Sheet and then data from Microsoft Excel is imported into to Oracle Database by  using SQL Developer.
+We have to create tables
