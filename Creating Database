@@ -11,4 +11,9 @@ On this database whole Project will work. It is classified into four different c
 On this database, product will do the calculations.
 
 First, it was created in the Excel Sheet and then data from Microsoft Excel is imported into to Oracle Database by  using SQL Developer.
-We have to create tables
+Software used for the Conversion is the Oracle 10g.
+
+Database is uploaded in the form of the excel is the github.
+700 different types of fruits and vegetables are collected along with their PLU codes.Even, the grams in each lb is also presented
+In that chart.
+
