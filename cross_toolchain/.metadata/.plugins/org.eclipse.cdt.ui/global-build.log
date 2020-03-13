@@ -1,0 +1,12 @@
+21:19:24 **** Build of configuration Debug for project test_project ****
+make all 
+Building file: ../src/test_project.cpp
+Invoking: Cross G++ Compiler
+arm-linux-gnueabihf-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/test_project.d" -MT"src/test_project.o" -o "src/test_project.o" "../src/test_project.cpp"
+Finished building: ../src/test_project.cpp
+ 
+Building target: test_project
+Invoking: Cross G++ Linker
+arm-linux-gnueabihf-g++  -o "test_project"  ./src/test_project.o   
+Finished building target: test_project
+ 
