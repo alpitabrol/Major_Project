@@ -1,8 +1,4 @@
-15:24:41 **** Clean-only build of configuration Debug for project test_project ****
-make clean 
-rm -rf  ./src/test_project.o  ./src/test_project.d  test_project
- 
-15:24:47 **** Build of configuration Debug for project test_project ****
+11:36:46 **** Build of configuration Debug for project test_project ****
 make all 
 Building file: ../src/test_project.cpp
 Invoking: Cross G++ Compiler
@@ -14,6 +10,9 @@ Invoking: Cross G++ Linker
 arm-linux-gnueabihf-g++  -o "test_project"  ./src/test_project.o   
 Finished building target: test_project
  
-15:25:23 **** Incremental Build of configuration Debug for project test_project ****
+11:37:04 **** Incremental Build of configuration Debug for project test_project ****
+make all 
+make: Nothing to be done for 'all'.
+11:38:24 **** Incremental Build of configuration Debug for project test_project ****
 make all 
 make: Nothing to be done for 'all'.

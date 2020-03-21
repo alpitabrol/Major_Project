@@ -1,15 +1,13 @@
-//============================================================================
-// Name        : test_project.cpp
-// Author      : 
-// Version     :
-// Copyright   : Your copyright notice
-// Description : Hello World in C++, Ansi-style
-//============================================================================
-
+//#include <wiringPi.h>
 #include <iostream>
-using namespace std;
+#include "GPIO.h"
 
-int main() {
-	cout << "cross complilation worked!!" << endl; // prints cross complilation worked!!
-	return 0;
+
+#define ROWS 4
+#define COLS 3
+using namespace std;
+int main(void)
+{
+ cout<<"Raspi_Connection Established"<<endl;
+   return 0;
 }
