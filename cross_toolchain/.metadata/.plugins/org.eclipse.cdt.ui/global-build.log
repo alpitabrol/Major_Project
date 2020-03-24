@@ -1,36 +1,12 @@
-11:32:24 **** Build of configuration Debug for project keypad_interface ****
+00:38:43 **** Incremental Build of configuration Debug for project keypad_interface ****
 make all 
 Building file: ../src/keypad_interface.cpp
 Invoking: Cross G++ Compiler
 arm-linux-gnueabihf-g++ -I/home/devil/Documents/tools/arm-bcm2708/arm-linux-gnueabihf/arm-linux-gnueabihf/include/c++/4.9.3/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/keypad_interface.d" -MT"src/keypad_interface.o" -o "src/keypad_interface.o" "../src/keypad_interface.cpp"
-Finished building: ../src/keypad_interface.cpp
- 
-Building target: keypad_interface
-Invoking: Cross G++ Linker
-arm-linux-gnueabihf-g++ -L/home/devil/Documents/tools/arm-bcm2708/arm-linux-gnueabihf/. -o "keypad_interface"  ./src/keypad_interface.o   
-Finished building target: keypad_interface
- 
-make --no-print-directory post-build
-scp keypad_interface pi@dex.local:/home/pi/cross_toolchain_test
- 
-11:32:32 **** Incremental Build of configuration Debug for project keypad_interface ****
-make all 
-make: Nothing to be done for 'all'.
-11:32:35 **** Incremental Build of configuration Debug for project keypad_interface ****
-make all 
-make: Nothing to be done for 'all'.
-14:49:49 **** Incremental Build of configuration Debug for project keypad_interface ****
-make all 
-Building file: ../src/keypad_interface.cpp
-Invoking: Cross G++ Compiler
-arm-linux-gnueabihf-g++ -I/home/devil/Documents/tools/arm-bcm2708/arm-linux-gnueabihf/arm-linux-gnueabihf/include/c++/4.9.3/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/keypad_interface.d" -MT"src/keypad_interface.o" -o "src/keypad_interface.o" "../src/keypad_interface.cpp"
-Finished building: ../src/keypad_interface.cpp
- 
-Building target: keypad_interface
-Invoking: Cross G++ Linker
-arm-linux-gnueabihf-g++ -L/home/devil/Documents/tools/arm-bcm2708/arm-linux-gnueabihf/. -o "keypad_interface"  ./src/keypad_interface.o   
-Finished building target: keypad_interface
- 
-make --no-print-directory post-build
-scp keypad_interface pi@dex.local:/home/pi/cross_toolchain_test
- 
+src/subdir.mk:18: recipe for target 'src/keypad_interface.o' failed
+../src/keypad_interface.cpp:1:22: fatal error: wiringPi.h: No such file or directory
+ #include <wiringPi.h>
+                      ^
+compilation terminated.
+make: *** [src/keypad_interface.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
