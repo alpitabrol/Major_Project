@@ -1,12 +1,49 @@
-00:38:43 **** Incremental Build of configuration Debug for project keypad_interface ****
+22:09:51 **** Build of configuration Debug for project keypad_interface ****
 make all 
 Building file: ../src/keypad_interface.cpp
 Invoking: Cross G++ Compiler
 arm-linux-gnueabihf-g++ -I/home/devil/Documents/tools/arm-bcm2708/arm-linux-gnueabihf/arm-linux-gnueabihf/include/c++/4.9.3/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/keypad_interface.d" -MT"src/keypad_interface.o" -o "src/keypad_interface.o" "../src/keypad_interface.cpp"
-src/subdir.mk:18: recipe for target 'src/keypad_interface.o' failed
-../src/keypad_interface.cpp:1:22: fatal error: wiringPi.h: No such file or directory
- #include <wiringPi.h>
-                      ^
-compilation terminated.
-make: *** [src/keypad_interface.o] Error 1
-"make all" terminated with exit code 2. Build might be incomplete.
+Finished building: ../src/keypad_interface.cpp
+ 
+Building file: ../src/piHiPri.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -I/home/devil/Documents/tools/arm-bcm2708/arm-linux-gnueabihf/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/piHiPri.d" -MT"src/piHiPri.o" -o "src/piHiPri.o" "../src/piHiPri.c"
+Finished building: ../src/piHiPri.c
+ 
+Building file: ../src/softPwm.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -I/home/devil/Documents/tools/arm-bcm2708/arm-linux-gnueabihf/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/softPwm.d" -MT"src/softPwm.o" -o "src/softPwm.o" "../src/softPwm.c"
+Finished building: ../src/softPwm.c
+ 
+Building file: ../src/softTone.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -I/home/devil/Documents/tools/arm-bcm2708/arm-linux-gnueabihf/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/softTone.d" -MT"src/softTone.o" -o "src/softTone.o" "../src/softTone.c"
+Finished building: ../src/softTone.c
+ 
+Building file: ../src/wiringPi.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -I/home/devil/Documents/tools/arm-bcm2708/arm-linux-gnueabihf/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/wiringPi.d" -MT"src/wiringPi.o" -o "src/wiringPi.o" "../src/wiringPi.c"
+../src/wiringPi.c: In function 'pinMode':
+../src/wiringPi.c:1446:5: warning: implicit declaration of function 'softToneStop' [-Wimplicit-function-declaration]
+     softToneStop (origPin) ;
+     ^
+../src/wiringPi.c:1458:7: warning: implicit declaration of function 'softToneCreate' [-Wimplicit-function-declaration]
+       softToneCreate (origPin) ;
+       ^
+../src/wiringPi.c: At top level:
+../src/wiringPi.c:1325:21: warning: 'digitalRead8Dummy' defined but not used [-Wunused-function]
+ static unsigned int digitalRead8Dummy        (UNU struct wiringPiNodeStruct *node, UNU int UNU pin)            { return 0 ; }
+                     ^
+../src/wiringPi.c:1326:21: warning: 'digitalWrite8Dummy' defined but not used [-Wunused-function]
+ static         void digitalWrite8Dummy       (UNU struct wiringPiNodeStruct *node, UNU int pin, UNU int value) { return ; }
+                     ^
+Finished building: ../src/wiringPi.c
+ 
+Building target: keypad_interface
+Invoking: Cross G++ Linker
+arm-linux-gnueabihf-g++ -L/home/devil/Documents/tools/arm-bcm2708/arm-linux-gnueabihf/. -o "keypad_interface"  ./src/keypad_interface.o ./src/piHiPri.o ./src/softPwm.o ./src/softTone.o ./src/wiringPi.o   -lpthread
+Finished building target: keypad_interface
+ 
+make --no-print-directory post-build
+scp keypad_interface pi@dex.local:/home/pi/cross_toolchain_test
+ 

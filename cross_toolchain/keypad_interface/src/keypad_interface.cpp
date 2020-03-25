@@ -1,12 +1,13 @@
-#include <wiringPi.h>
+#include "wiringPi.h"
 #include <iostream>
 
 #define ROWS 4
-#define COLS 4
+#define COLS 3
+using namespace std;
 
 char pressedKey = '\0';
-int rowPins[ROWS] = {22,23,24,25};
-int colPins[COLS] = {2,3,4};
+int rowPins[ROWS] = {26,24,23,22};			//{22,23,24,25};
+int colPins[COLS] = {21,19,10};			//{2,3,4};
 
 char keys[ROWS][COLS] = {
    {'1', '2', '3'},
@@ -25,7 +26,7 @@ void init_keypad()
 
    for (int r = 0; r < ROWS; r++)
    {
-      pinMode(rowPins[0], INPUT);
+      pinMode(rowPins[r], INPUT);
       digitalWrite(rowPins[r], PUD_UP);
    }
 }
@@ -76,7 +77,7 @@ int main(void)
       char x = get_key();
 
       if (x)
-    	  cout<<"pressed:\n"<<x;
+    	  cout<<"\npressed:"<<x;
          //printf("pressed: %c\n", x);
       else
     	  cout<<"no key presses\n";
