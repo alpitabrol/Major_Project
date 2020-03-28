@@ -15,7 +15,6 @@ char keys[ROWS][COLS] = {
    {'7', '8', '9'},
    {'*', '0', '#'}
 };
-
 void init_keypad()
 {
    for (int c = 0; c < COLS; c++)
@@ -26,8 +25,8 @@ void init_keypad()
 
    for (int r = 0; r < ROWS; r++)
    {
-      pinMode(rowPins[r], INPUT);
-      digitalWrite(rowPins[r], PUD_UP);
+      pinMode(rowPins[0], INPUT);
+      pullUpDnControl(rowPins[r], PUD_UP);
    }
 }
 
