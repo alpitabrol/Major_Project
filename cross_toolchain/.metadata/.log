@@ -1754,3 +1754,80 @@ org.eclipse.remote.core.exception.RemoteConnectionException:
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
 !SUBENTRY 2 org.eclipse.remote.core 4 0 2020-03-29 22:24:50.281
 !MESSAGE 
+!SESSION 2020-03-29 23:09:25.462 -----------------------------------------------
+eclipse.buildId=4.14.0.I20191210-0610
+java.version=11.0.6
+java.vendor=Ubuntu
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_CA
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2020-03-29 23:13:16.283
+!MESSAGE Error in final launch sequence:
+
+Failed to execute MI command:
+source /home/devil/Desktop/Major_Project/cross_toolchain/keypad_interface/.gdbinit
+Error message from debugger back end:
+/home/devil/Desktop/Major_Project/cross_toolchain/keypad_interface/.gdbinit: No such file or directory.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to execute MI command:
+source /home/devil/Desktop/Major_Project/cross_toolchain/keypad_interface/.gdbinit
+Error message from debugger back end:
+/home/devil/Desktop/Major_Project/cross_toolchain/keypad_interface/.gdbinit: No such file or directory.
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:112)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:242)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:106)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:94)
+	at org.eclipse.cdt.launch.remote.launching.RemoteGdbLaunchDelegate.launch(RemoteGdbLaunchDelegate.java:198)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:860)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:719)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1017)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1220)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.Exception: /home/devil/Desktop/Major_Project/cross_toolchain/keypad_interface/.gdbinit: No such file or directory.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2020-03-29 23:13:16.285
+!MESSAGE Failed to execute MI command:
+source /home/devil/Desktop/Major_Project/cross_toolchain/keypad_interface/.gdbinit
+Error message from debugger back end:
+/home/devil/Desktop/Major_Project/cross_toolchain/keypad_interface/.gdbinit: No such file or directory.
+!STACK 0
+java.lang.Exception: /home/devil/Desktop/Major_Project/cross_toolchain/keypad_interface/.gdbinit: No such file or directory.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2020-03-29 23:13:42.706
+!MESSAGE Error in final launch sequence:
+
+Failed to execute MI command:
+source /home/devil/Desktop/Major_Project/cross_toolchain/keypad_interface/.gdbinit
+Error message from debugger back end:
+/home/devil/Desktop/Major_Project/cross_toolchain/keypad_interface/.gdbinit: No such file or directory.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to execute MI command:
+source /home/devil/Desktop/Major_Project/cross_toolchain/keypad_interface/.gdbinit
+Error message from debugger back end:
+/home/devil/Desktop/Major_Project/cross_toolchain/keypad_interface/.gdbinit: No such file or directory.
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:112)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:242)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:106)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:94)
+	at org.eclipse.cdt.launch.remote.launching.RemoteGdbLaunchDelegate.launch(RemoteGdbLaunchDelegate.java:198)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:860)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:719)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1017)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1220)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.Exception: /home/devil/Desktop/Major_Project/cross_toolchain/keypad_interface/.gdbinit: No such file or directory.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2020-03-29 23:13:42.707
+!MESSAGE Failed to execute MI command:
+source /home/devil/Desktop/Major_Project/cross_toolchain/keypad_interface/.gdbinit
+Error message from debugger back end:
+/home/devil/Desktop/Major_Project/cross_toolchain/keypad_interface/.gdbinit: No such file or directory.
+!STACK 0
+java.lang.Exception: /home/devil/Desktop/Major_Project/cross_toolchain/keypad_interface/.gdbinit: No such file or directory.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
