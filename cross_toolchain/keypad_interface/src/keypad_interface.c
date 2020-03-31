@@ -1,17 +1,15 @@
 #include "wiringPi.h"
 #include <stdio.h>
 
-
-
 #define ROWS 4
-#define COLS 3
 
+#define COLS 3
 int rowVal = -1, colVal = -1;
 int c=0,r=0;
 
 //assigning the pins attached from keypad to raspberry pi
-int rowPins[ROWS] = {26,24,23,22};
-int colPins[COLS] = {21,19,10};
+int rowPins[ROWS] = {21,22,23,24};
+int colPins[COLS] = {25,27,28};
 
 char keys[ROWS][COLS] = {
    {'1', '2', '3'},
@@ -23,6 +21,7 @@ char keys[ROWS][COLS] = {
 //function for scanning rows for pushed button
 int findRow()
 {
+
    for (r = 0; r < ROWS; r++)
    {
       if (digitalRead(rowPins[r]) == LOW)
@@ -55,8 +54,8 @@ void reset_vals()
 
 	for (c = 0; c < COLS; c++)
 		   {
-		      pinMode(colPins[c], OUTPUT);
-		      digitalWrite(colPins[c], LOW);
+		      pinMode(colPins[c], INPUT);
+		      digitalWrite(colPins[c], PUD_UP);
 		   }
 }
 
@@ -84,13 +83,16 @@ int get_key()
 
 	//exiting if no button pressed
 	if (rowVal<0 || rowVal>3)
-	return 0;
+	{
+		reset_vals();
+		return 0;
+	}
 
 	//Convert columns to input
 	for (c = 0; c < COLS; c++)
 		   {
 		      pinMode(colPins[c], INPUT);
-		      pullUpDnControl(colPins[c], PUD_UP);
+		      pullUpDnControl(colPins[c], PUD_DOWN);
 		   }
 
 	//Switch the pressed button row found from scan to output
@@ -102,7 +104,10 @@ int get_key()
 
 	//exiting if no button pressed
 	if (colVal<0 || colVal>2)
-	return 0;
+	{
+		reset_vals();
+		return 0;
+	}
 
 	//Calling function for reinitialize all rows and columns as input
 	reset_vals();
@@ -117,14 +122,18 @@ int main(void)
 {
 	 wiringPiSetup();
 
-	   int digit = 0;
+	   char digit;
 
+	 while(1){
 	   while (!digit)
 	   {
 		   digit = get_key();
 	   }
-	  printf("%d /n",digit);
+	  printf("%c \n",digit);
 
+	 delay(500);
+	 digit ='\0';
+	 }
 	  return 0;
 
 }
