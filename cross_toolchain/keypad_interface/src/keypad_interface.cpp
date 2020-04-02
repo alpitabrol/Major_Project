@@ -125,26 +125,122 @@ int get_key()
 int main(void)
 {
 	 wiringPiSetup();
+	 int check = 1, start_shopping = 0 , weight_code=1;
+	 string code = "";
+	 char digit= '\0';
+	 string temp_list[20][2];
+	 string shopping_list[20][2];
+	 int temp_list_row = 0;
+	 cout<<"Enter 1111# for Start Shopping.\n"<<endl;
 
-	 char digit;
-	 char code_seq[6]= "";
-	 char shopping_list[10][2];
-
-
-
-
-
-	 while(1)
+	 while(check)
 	 {
-	   while (!digit)
-	   {
-		   digit = get_key();
-	   }
-	  cout<<digit<<endl;
-	  // printf("%c \n",digit);
-	 delay(500);
-	 digit ='\0';
+		 while (!digit)
+		 {
+			 digit = get_key();
+		 }
+		 cout<<"digit pressed: "<<digit<<endl;
+
+		 if(digit == '#' && (code.length()== 4 || code.length()==5) )
+		 {
+			 if (start_shopping==0 && code == "1111")
+			 {
+				 code = "";
+				 digit = '\0';
+				 start_shopping = 1;
+				 cout<<"Shopping Started"<<endl;
+			 }
+
+			 else if (code == "0000")
+			 {
+				 check = 0;
+				 code = "";
+				 digit = '\0';
+				 start_shopping = 0;
+
+				 for(int i=0 ; i <temp_list_row  ; i++)
+				 {
+					 for(int j=0 ; j<2 ; j++)
+					 {
+						 shopping_list[i][j] = temp_list[i][j];
+					 }
+				 }
+				 cout<<"Shopping Ended :)"<<endl;
+			 }
+
+			 else if (start_shopping==1 && (code.length() == 4 || code.length() == 5))
+						 {
+
+							 temp_list[temp_list_row][0] = code;
+							 digit = '\0';
+							 cout<<"Enter weight(in lbs) for the Code Entered "<<code<<endl;//<<": ";
+
+							 weight_code=1;
+
+							while(weight_code)
+							{
+								delay(500);
+								while (!digit)
+							 	 {
+							 		 digit = get_key();
+							 	 }
+								if(digit=='1'||digit=='2'||digit=='3'||digit=='4'||digit=='5'||digit=='6'||digit=='7'||digit=='8'||digit=='9')
+								{
+								 temp_list[temp_list_row][1] = digit;
+								 cout<<"Weight Entered: "<<digit<<endl;
+
+								cout<<"Enter the code for next item or 0000# for finishing shopping"<<endl;
+								 weight_code = 0;
+								 digit='\0';
+								 code = "";
+								 temp_list_row++;
+								}
+								else
+								{
+									cout<<"not a correct weight, enter correct weight"<<endl;
+									digit='\0';
+								}
+							}
+
+						 }
+
+			 else
+			 {
+				 code = "";
+				 digit = '\0';
+			 }
+		 }
+
+		 else if (digit == '*' || digit == '#')
+		 {
+			 digit = '\0';
+			 code = "";
+		 }
+
+		 else
+		 {
+			code = code + digit;
+			digit = '\0';
+			cout<<"Code so far: "<<code<<endl;
+		 }
+
+
+		   delay(500);
+
+
 	 }
-	  return 0;
+
+cout<<"Item's Code	Weight(lbs)"<<endl;
+for(int i=0;i<temp_list_row;i++)
+{
+	for(int j=0 ; j < 2 ; j++)
+	{
+		cout<<shopping_list[i][j]<<" 		";
+	}
+cout<<endl;
+}
+
+
+return 0;
 
 }
