@@ -1,9 +1,13 @@
 #include "wiringPi.h"
-#include <stdio.h>
-
+#include<iostream>
+#include <string.h>
 #define ROWS 4
-
 #define COLS 3
+
+using namespace std;
+
+
+//defining universal variables
 int rowVal = -1, colVal = -1;
 int c=0,r=0;
 
@@ -122,15 +126,22 @@ int main(void)
 {
 	 wiringPiSetup();
 
-	   char digit;
+	 char digit;
+	 char code_seq[6]= "";
+	 char shopping_list[10][2];
 
-	 while(1){
+
+
+
+
+	 while(1)
+	 {
 	   while (!digit)
 	   {
 		   digit = get_key();
 	   }
-	  printf("%c \n",digit);
-
+	  cout<<digit<<endl;
+	  // printf("%c \n",digit);
 	 delay(500);
 	 digit ='\0';
 	 }

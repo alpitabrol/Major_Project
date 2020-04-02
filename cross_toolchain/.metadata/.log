@@ -1831,3 +1831,13 @@ Error message from debugger back end:
 java.lang.Exception: /home/devil/Desktop/Major_Project/cross_toolchain/keypad_interface/.gdbinit: No such file or directory.
 	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
 	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+!SESSION 2020-04-01 10:08:00.973 -----------------------------------------------
+eclipse.buildId=4.14.0.I20191210-0610
+java.version=11.0.6
+java.vendor=Ubuntu
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_CA
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2020-04-01 10:29:56.402
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
