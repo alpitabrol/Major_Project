@@ -1,7 +1,9 @@
 Basic Code Plan Involves:
 
-Page1: Login (User Management)(HTML5)
-Page2:List of Grocery Bought + Backend Anaylsis(C++) [Calling API functions] [Passing from C++ to HTML5]
-Page3:Final Output
+Page1: Login (User Management)(HTML5) 
+It includes details such as username and storing the plu codes  in the database) + displaying the grocery bought.
+Page2:List of Grocery Bought + Backend Anaylsis(C++) [Calling API functions] [Passing from C++ to HTML5] (Database Management) + logic used 
+
+Page3:Final Output (Execution Unit)
 
 
