@@ -19,6 +19,11 @@ CREATE TABLE `final_database`.`data_base` (
   `GRAMS_IN_PORTIONS` INT NOT NULL,
   PRIMARY KEY (`PLU_CODES`));
   
+  INSERTING VALUE INTO THIS TABLE DATABASE:
+  
+  INSERT INTO `final_database`.`data_base` (`PLU_CODES`, `COMMODITY`, `VARIETY`, `SIZE`, `PIECES_IN_1LB`, `PORTIONS`,
+  `GRAMS_IN_PORTIONS`) VALUES ('3283', 'Apples', 'HoneyCrisp', 'Regular', '3', '3', '80');
+  
   Page3:Final Output (Execution Unit)
 
 
