@@ -1,430 +1,287 @@
-00:38:44 **** Clean-only build of configuration Debug for project keypad_interface ****
-make clean 
-rm -rf  ./src/keypad_interface.o ./src/piHiPri.o ./src/softPwm.o ./src/softTone.o ./src/wiringPi.o  ./src/piHiPri.d ./src/softPwm.d ./src/softTone.d ./src/wiringPi.d  ./src/keypad_interface.d  keypad_interface
- 
-00:38:47 **** Build of configuration Debug for project keypad_interface ****
+21:24:55 **** Incremental Build of configuration Debug for project server_conn ****
 make all 
-Building file: ../src/keypad_interface.cpp
+Building file: ../src/server_main.cpp
 Invoking: Cross G++ Compiler
-arm-linux-gnueabihf-g++ -I/home/devil/Documents/tools/arm-bcm2708/arm-linux-gnueabihf/arm-linux-gnueabihf/include/c++/4.9.3/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/keypad_interface.d" -MT"src/keypad_interface.o" -o "src/keypad_interface.o" "../src/keypad_interface.cpp"
-Finished building: ../src/keypad_interface.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/server_main.d" -MT"src/server_main.o" -o "src/server_main.o" "../src/server_main.cpp"
+../src/server_main.cpp: In function ‘int main(int, char**)’:
+../src/server_main.cpp:37:22: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for (int i = 0; i < rec_msg_to_str.size(); i++)
+                    ~~^~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/server_main.cpp
  
-Building file: ../src/piHiPri.c
-Invoking: Cross GCC Compiler
-arm-linux-gnueabihf-gcc -I/home/devil/Documents/tools/arm-bcm2708/arm-linux-gnueabihf/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/piHiPri.d" -MT"src/piHiPri.o" -o "src/piHiPri.o" "../src/piHiPri.c"
-Finished building: ../src/piHiPri.c
+Building target: server_conn
+Invoking: Cross G++ Linker
+g++  -o "server_conn"  ./src/SocketServer.o ./src/server_main.o   
+Finished building target: server_conn
  
-Building file: ../src/softPwm.c
-Invoking: Cross GCC Compiler
-arm-linux-gnueabihf-gcc -I/home/devil/Documents/tools/arm-bcm2708/arm-linux-gnueabihf/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/softPwm.d" -MT"src/softPwm.o" -o "src/softPwm.o" "../src/softPwm.c"
-Finished building: ../src/softPwm.c
- 
-Building file: ../src/softTone.c
-Invoking: Cross GCC Compiler
-arm-linux-gnueabihf-gcc -I/home/devil/Documents/tools/arm-bcm2708/arm-linux-gnueabihf/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/softTone.d" -MT"src/softTone.o" -o "src/softTone.o" "../src/softTone.c"
-Finished building: ../src/softTone.c
- 
-Building file: ../src/wiringPi.c
-Invoking: Cross GCC Compiler
-arm-linux-gnueabihf-gcc -I/home/devil/Documents/tools/arm-bcm2708/arm-linux-gnueabihf/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/wiringPi.d" -MT"src/wiringPi.o" -o "src/wiringPi.o" "../src/wiringPi.c"
-Finished building: ../src/wiringPi.c
+22:04:05 **** Incremental Build of configuration Debug for project keypad_interface ****
+make all 
+Building file: ../src/client.cpp
+Invoking: Cross G++ Compiler
+arm-linux-gnueabihf-g++ -I/home/devil/Documents/tools/arm-bcm2708/arm-linux-gnueabihf/arm-linux-gnueabihf/include/c++/4.9.3/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.cpp"
+Finished building: ../src/client.cpp
  
 Building target: keypad_interface
 Invoking: Cross G++ Linker
-arm-linux-gnueabihf-g++ -L/home/devil/Documents/tools/arm-bcm2708/arm-linux-gnueabihf/. -o "keypad_interface"  ./src/keypad_interface.o ./src/piHiPri.o ./src/softPwm.o ./src/softTone.o ./src/wiringPi.o   -lpthread
+arm-linux-gnueabihf-g++ -L/home/devil/Documents/tools/arm-bcm2708/arm-linux-gnueabihf/. -o "keypad_interface"  ./src/SocketClient.o ./src/client.o ./src/keypad_interface.o ./src/piHiPri.o ./src/softPwm.o ./src/softTone.o ./src/wiringPi.o   -lpthread
 Finished building target: keypad_interface
  
 make --no-print-directory post-build
-scp keypad_interface pi@dex.local:/home/pi/cross_toolchain_test
+scp keypad_interface pi@dex.local:/home/pi/client_conn
  
-00:49:41 **** Incremental Build of configuration Debug for project keypad_interface ****
+22:04:12 **** Incremental Build of configuration Debug for project server_conn ****
 make all 
-Building file: ../src/keypad_interface.cpp
+Building file: ../src/server_main.cpp
 Invoking: Cross G++ Compiler
-arm-linux-gnueabihf-g++ -I/home/devil/Documents/tools/arm-bcm2708/arm-linux-gnueabihf/arm-linux-gnueabihf/include/c++/4.9.3/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/keypad_interface.d" -MT"src/keypad_interface.o" -o "src/keypad_interface.o" "../src/keypad_interface.cpp"
-Finished building: ../src/keypad_interface.cpp
- 
-Building target: keypad_interface
-Invoking: Cross G++ Linker
-arm-linux-gnueabihf-g++ -L/home/devil/Documents/tools/arm-bcm2708/arm-linux-gnueabihf/. -o "keypad_interface"  ./src/keypad_interface.o ./src/piHiPri.o ./src/softPwm.o ./src/softTone.o ./src/wiringPi.o   -lpthread
-Finished building target: keypad_interface
- 
-make --no-print-directory post-build
-scp keypad_interface pi@dex.local:/home/pi/cross_toolchain_test
- 
-01:33:50 **** Incremental Build of configuration Debug for project keypad_interface ****
-make all 
-Building file: ../src/keypad_interface.cpp
-Invoking: Cross G++ Compiler
-arm-linux-gnueabihf-g++ -I/home/devil/Documents/tools/arm-bcm2708/arm-linux-gnueabihf/arm-linux-gnueabihf/include/c++/4.9.3/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/keypad_interface.d" -MT"src/keypad_interface.o" -o "src/keypad_interface.o" "../src/keypad_interface.cpp"
-../src/keypad_interface.cpp: In function 'int main()':
-../src/keypad_interface.cpp:133:26: warning: unused variable 'temp_list_col' [-Wunused-variable]
-   int temp_list_row = 0, temp_list_col=0;
-                          ^
-Finished building: ../src/keypad_interface.cpp
- 
-Building target: keypad_interface
-Invoking: Cross G++ Linker
-arm-linux-gnueabihf-g++ -L/home/devil/Documents/tools/arm-bcm2708/arm-linux-gnueabihf/. -o "keypad_interface"  ./src/keypad_interface.o ./src/piHiPri.o ./src/softPwm.o ./src/softTone.o ./src/wiringPi.o   -lpthread
-Finished building target: keypad_interface
- 
-make --no-print-directory post-build
-scp keypad_interface pi@dex.local:/home/pi/cross_toolchain_test
- 
-01:34:12 **** Incremental Build of configuration Debug for project keypad_interface ****
-make all 
-Building file: ../src/keypad_interface.cpp
-Invoking: Cross G++ Compiler
-arm-linux-gnueabihf-g++ -I/home/devil/Documents/tools/arm-bcm2708/arm-linux-gnueabihf/arm-linux-gnueabihf/include/c++/4.9.3/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/keypad_interface.d" -MT"src/keypad_interface.o" -o "src/keypad_interface.o" "../src/keypad_interface.cpp"
-Finished building: ../src/keypad_interface.cpp
- 
-Building target: keypad_interface
-Invoking: Cross G++ Linker
-arm-linux-gnueabihf-g++ -L/home/devil/Documents/tools/arm-bcm2708/arm-linux-gnueabihf/. -o "keypad_interface"  ./src/keypad_interface.o ./src/piHiPri.o ./src/softPwm.o ./src/softTone.o ./src/wiringPi.o   -lpthread
-Finished building target: keypad_interface
- 
-make --no-print-directory post-build
-scp keypad_interface pi@dex.local:/home/pi/cross_toolchain_test
- 
-01:35:45 **** Incremental Build of configuration Debug for project keypad_interface ****
-make all 
-Building file: ../src/keypad_interface.cpp
-Invoking: Cross G++ Compiler
-arm-linux-gnueabihf-g++ -I/home/devil/Documents/tools/arm-bcm2708/arm-linux-gnueabihf/arm-linux-gnueabihf/include/c++/4.9.3/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/keypad_interface.d" -MT"src/keypad_interface.o" -o "src/keypad_interface.o" "../src/keypad_interface.cpp"
-Finished building: ../src/keypad_interface.cpp
- 
-Building target: keypad_interface
-Invoking: Cross G++ Linker
-arm-linux-gnueabihf-g++ -L/home/devil/Documents/tools/arm-bcm2708/arm-linux-gnueabihf/. -o "keypad_interface"  ./src/keypad_interface.o ./src/piHiPri.o ./src/softPwm.o ./src/softTone.o ./src/wiringPi.o   -lpthread
-Finished building target: keypad_interface
- 
-make --no-print-directory post-build
-scp keypad_interface pi@dex.local:/home/pi/cross_toolchain_test
- 
-01:38:09 **** Incremental Build of configuration Debug for project keypad_interface ****
-make all 
-Building file: ../src/keypad_interface.cpp
-Invoking: Cross G++ Compiler
-arm-linux-gnueabihf-g++ -I/home/devil/Documents/tools/arm-bcm2708/arm-linux-gnueabihf/arm-linux-gnueabihf/include/c++/4.9.3/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/keypad_interface.d" -MT"src/keypad_interface.o" -o "src/keypad_interface.o" "../src/keypad_interface.cpp"
-Finished building: ../src/keypad_interface.cpp
- 
-Building target: keypad_interface
-Invoking: Cross G++ Linker
-arm-linux-gnueabihf-g++ -L/home/devil/Documents/tools/arm-bcm2708/arm-linux-gnueabihf/. -o "keypad_interface"  ./src/keypad_interface.o ./src/piHiPri.o ./src/softPwm.o ./src/softTone.o ./src/wiringPi.o   -lpthread
-Finished building target: keypad_interface
- 
-make --no-print-directory post-build
-scp keypad_interface pi@dex.local:/home/pi/cross_toolchain_test
- 
-01:42:54 **** Incremental Build of configuration Debug for project keypad_interface ****
-make all 
-Building file: ../src/keypad_interface.cpp
-Invoking: Cross G++ Compiler
-arm-linux-gnueabihf-g++ -I/home/devil/Documents/tools/arm-bcm2708/arm-linux-gnueabihf/arm-linux-gnueabihf/include/c++/4.9.3/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/keypad_interface.d" -MT"src/keypad_interface.o" -o "src/keypad_interface.o" "../src/keypad_interface.cpp"
-Finished building: ../src/keypad_interface.cpp
- 
-Building target: keypad_interface
-Invoking: Cross G++ Linker
-arm-linux-gnueabihf-g++ -L/home/devil/Documents/tools/arm-bcm2708/arm-linux-gnueabihf/. -o "keypad_interface"  ./src/keypad_interface.o ./src/piHiPri.o ./src/softPwm.o ./src/softTone.o ./src/wiringPi.o   -lpthread
-Finished building target: keypad_interface
- 
-make --no-print-directory post-build
-scp keypad_interface pi@dex.local:/home/pi/cross_toolchain_test
- 
-01:44:44 **** Incremental Build of configuration Debug for project keypad_interface ****
-make all 
-Building file: ../src/keypad_interface.cpp
-Invoking: Cross G++ Compiler
-arm-linux-gnueabihf-g++ -I/home/devil/Documents/tools/arm-bcm2708/arm-linux-gnueabihf/arm-linux-gnueabihf/include/c++/4.9.3/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/keypad_interface.d" -MT"src/keypad_interface.o" -o "src/keypad_interface.o" "../src/keypad_interface.cpp"
-Finished building: ../src/keypad_interface.cpp
- 
-Building target: keypad_interface
-Invoking: Cross G++ Linker
-arm-linux-gnueabihf-g++ -L/home/devil/Documents/tools/arm-bcm2708/arm-linux-gnueabihf/. -o "keypad_interface"  ./src/keypad_interface.o ./src/piHiPri.o ./src/softPwm.o ./src/softTone.o ./src/wiringPi.o   -lpthread
-Finished building target: keypad_interface
- 
-make --no-print-directory post-build
-scp keypad_interface pi@dex.local:/home/pi/cross_toolchain_test
- 
-01:48:21 **** Incremental Build of configuration Debug for project keypad_interface ****
-make all 
-Building file: ../src/keypad_interface.cpp
-Invoking: Cross G++ Compiler
-arm-linux-gnueabihf-g++ -I/home/devil/Documents/tools/arm-bcm2708/arm-linux-gnueabihf/arm-linux-gnueabihf/include/c++/4.9.3/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/keypad_interface.d" -MT"src/keypad_interface.o" -o "src/keypad_interface.o" "../src/keypad_interface.cpp"
-Finished building: ../src/keypad_interface.cpp
- 
-Building target: keypad_interface
-Invoking: Cross G++ Linker
-arm-linux-gnueabihf-g++ -L/home/devil/Documents/tools/arm-bcm2708/arm-linux-gnueabihf/. -o "keypad_interface"  ./src/keypad_interface.o ./src/piHiPri.o ./src/softPwm.o ./src/softTone.o ./src/wiringPi.o   -lpthread
-Finished building target: keypad_interface
- 
-make --no-print-directory post-build
-scp keypad_interface pi@dex.local:/home/pi/cross_toolchain_test
-scp: /home/pi/cross_toolchain_test/keypad_interface: Text file busy
-makefile:58: recipe for target 'post-build' failed
- 
-make[1]: [post-build] Error 1 (ignored)
-01:49:10 **** Incremental Build of configuration Debug for project keypad_interface ****
-make all 
-make: Nothing to be done for 'all'.
-01:50:16 **** Incremental Build of configuration Debug for project keypad_interface ****
-make all 
-Building file: ../src/keypad_interface.cpp
-Invoking: Cross G++ Compiler
-arm-linux-gnueabihf-g++ -I/home/devil/Documents/tools/arm-bcm2708/arm-linux-gnueabihf/arm-linux-gnueabihf/include/c++/4.9.3/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/keypad_interface.d" -MT"src/keypad_interface.o" -o "src/keypad_interface.o" "../src/keypad_interface.cpp"
-Finished building: ../src/keypad_interface.cpp
- 
-Building target: keypad_interface
-Invoking: Cross G++ Linker
-arm-linux-gnueabihf-g++ -L/home/devil/Documents/tools/arm-bcm2708/arm-linux-gnueabihf/. -o "keypad_interface"  ./src/keypad_interface.o ./src/piHiPri.o ./src/softPwm.o ./src/softTone.o ./src/wiringPi.o   -lpthread
-Finished building target: keypad_interface
- 
-make --no-print-directory post-build
-scp keypad_interface pi@dex.local:/home/pi/cross_toolchain_test
- 
-01:53:51 **** Incremental Build of configuration Debug for project keypad_interface ****
-make all 
-Building file: ../src/keypad_interface.cpp
-Invoking: Cross G++ Compiler
-arm-linux-gnueabihf-g++ -I/home/devil/Documents/tools/arm-bcm2708/arm-linux-gnueabihf/arm-linux-gnueabihf/include/c++/4.9.3/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/keypad_interface.d" -MT"src/keypad_interface.o" -o "src/keypad_interface.o" "../src/keypad_interface.cpp"
-../src/keypad_interface.cpp: In function 'int main()':
-../src/keypad_interface.cpp:224:1: error: expected ';' before 'for'
- for(int i=0;i<temp_list_row;i++)
- ^
-../src/keypad_interface.cpp:224:13: error: 'i' was not declared in this scope
- for(int i=0;i<temp_list_row;i++)
-             ^
-src/subdir.mk:34: recipe for target 'src/keypad_interface.o' failed
-make: *** [src/keypad_interface.o] Error 1
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/server_main.d" -MT"src/server_main.o" -o "src/server_main.o" "../src/server_main.cpp"
+../src/server_main.cpp: In function ‘int main(int, char**)’:
+../src/server_main.cpp:32:8: error: array size missing in ‘rec_msg_to_str’
+ string rec_msg_to_str[];
+        ^~~~~~~~~~~~~~
+../src/server_main.cpp:39:33: warning: statement has no effect [-Wunused-value]
+   rec_msg_to_str[msg_str_counter];
+   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+src/subdir.mk:21: recipe for target 'src/server_main.o' failed
+make: *** [src/server_main.o] Error 1
 "make all" terminated with exit code 2. Build might be incomplete.
-01:54:04 **** Incremental Build of configuration Debug for project keypad_interface ****
+22:04:46 **** Incremental Build of configuration Debug for project server_conn ****
 make all 
-Building file: ../src/keypad_interface.cpp
+Building file: ../src/server_main.cpp
 Invoking: Cross G++ Compiler
-arm-linux-gnueabihf-g++ -I/home/devil/Documents/tools/arm-bcm2708/arm-linux-gnueabihf/arm-linux-gnueabihf/include/c++/4.9.3/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/keypad_interface.d" -MT"src/keypad_interface.o" -o "src/keypad_interface.o" "../src/keypad_interface.cpp"
-Finished building: ../src/keypad_interface.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/server_main.d" -MT"src/server_main.o" -o "src/server_main.o" "../src/server_main.cpp"
+../src/server_main.cpp: In function ‘int main(int, char**)’:
+../src/server_main.cpp:39:33: warning: statement has no effect [-Wunused-value]
+   rec_msg_to_str[msg_str_counter];
+   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+Finished building: ../src/server_main.cpp
  
-Building target: keypad_interface
+Building target: server_conn
 Invoking: Cross G++ Linker
-arm-linux-gnueabihf-g++ -L/home/devil/Documents/tools/arm-bcm2708/arm-linux-gnueabihf/. -o "keypad_interface"  ./src/keypad_interface.o ./src/piHiPri.o ./src/softPwm.o ./src/softTone.o ./src/wiringPi.o   -lpthread
-Finished building target: keypad_interface
+g++  -o "server_conn"  ./src/SocketServer.o ./src/server_main.o   
+Finished building target: server_conn
  
-make --no-print-directory post-build
-scp keypad_interface pi@dex.local:/home/pi/cross_toolchain_test
- 
-01:55:20 **** Incremental Build of configuration Debug for project keypad_interface ****
-make all 
-Building file: ../src/keypad_interface.cpp
-Invoking: Cross G++ Compiler
-arm-linux-gnueabihf-g++ -I/home/devil/Documents/tools/arm-bcm2708/arm-linux-gnueabihf/arm-linux-gnueabihf/include/c++/4.9.3/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/keypad_interface.d" -MT"src/keypad_interface.o" -o "src/keypad_interface.o" "../src/keypad_interface.cpp"
-Finished building: ../src/keypad_interface.cpp
- 
-Building target: keypad_interface
-Invoking: Cross G++ Linker
-arm-linux-gnueabihf-g++ -L/home/devil/Documents/tools/arm-bcm2708/arm-linux-gnueabihf/. -o "keypad_interface"  ./src/keypad_interface.o ./src/piHiPri.o ./src/softPwm.o ./src/softTone.o ./src/wiringPi.o   -lpthread
-Finished building target: keypad_interface
- 
-make --no-print-directory post-build
-scp keypad_interface pi@dex.local:/home/pi/cross_toolchain_test
- 
-01:57:46 **** Incremental Build of configuration Debug for project keypad_interface ****
-make all 
-Building file: ../src/keypad_interface.cpp
-Invoking: Cross G++ Compiler
-arm-linux-gnueabihf-g++ -I/home/devil/Documents/tools/arm-bcm2708/arm-linux-gnueabihf/arm-linux-gnueabihf/include/c++/4.9.3/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/keypad_interface.d" -MT"src/keypad_interface.o" -o "src/keypad_interface.o" "../src/keypad_interface.cpp"
-Finished building: ../src/keypad_interface.cpp
- 
-Building target: keypad_interface
-Invoking: Cross G++ Linker
-arm-linux-gnueabihf-g++ -L/home/devil/Documents/tools/arm-bcm2708/arm-linux-gnueabihf/. -o "keypad_interface"  ./src/keypad_interface.o ./src/piHiPri.o ./src/softPwm.o ./src/softTone.o ./src/wiringPi.o   -lpthread
-Finished building target: keypad_interface
- 
-make --no-print-directory post-build
-scp keypad_interface pi@dex.local:/home/pi/cross_toolchain_test
- 
-02:00:19 **** Incremental Build of configuration Debug for project keypad_interface ****
-make all 
-Building file: ../src/keypad_interface.cpp
-Invoking: Cross G++ Compiler
-arm-linux-gnueabihf-g++ -I/home/devil/Documents/tools/arm-bcm2708/arm-linux-gnueabihf/arm-linux-gnueabihf/include/c++/4.9.3/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/keypad_interface.d" -MT"src/keypad_interface.o" -o "src/keypad_interface.o" "../src/keypad_interface.cpp"
-Finished building: ../src/keypad_interface.cpp
- 
-Building target: keypad_interface
-Invoking: Cross G++ Linker
-arm-linux-gnueabihf-g++ -L/home/devil/Documents/tools/arm-bcm2708/arm-linux-gnueabihf/. -o "keypad_interface"  ./src/keypad_interface.o ./src/piHiPri.o ./src/softPwm.o ./src/softTone.o ./src/wiringPi.o   -lpthread
-Finished building target: keypad_interface
- 
-make --no-print-directory post-build
-scp keypad_interface pi@dex.local:/home/pi/cross_toolchain_test
- 
-02:02:24 **** Incremental Build of configuration Debug for project keypad_interface ****
-make all 
-Building file: ../src/keypad_interface.cpp
-Invoking: Cross G++ Compiler
-arm-linux-gnueabihf-g++ -I/home/devil/Documents/tools/arm-bcm2708/arm-linux-gnueabihf/arm-linux-gnueabihf/include/c++/4.9.3/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/keypad_interface.d" -MT"src/keypad_interface.o" -o "src/keypad_interface.o" "../src/keypad_interface.cpp"
-Finished building: ../src/keypad_interface.cpp
- 
-Building target: keypad_interface
-Invoking: Cross G++ Linker
-arm-linux-gnueabihf-g++ -L/home/devil/Documents/tools/arm-bcm2708/arm-linux-gnueabihf/. -o "keypad_interface"  ./src/keypad_interface.o ./src/piHiPri.o ./src/softPwm.o ./src/softTone.o ./src/wiringPi.o   -lpthread
-Finished building target: keypad_interface
- 
-make --no-print-directory post-build
-scp keypad_interface pi@dex.local:/home/pi/cross_toolchain_test
- 
-02:03:13 **** Incremental Build of configuration Debug for project keypad_interface ****
-make all 
-Building file: ../src/keypad_interface.cpp
-Invoking: Cross G++ Compiler
-arm-linux-gnueabihf-g++ -I/home/devil/Documents/tools/arm-bcm2708/arm-linux-gnueabihf/arm-linux-gnueabihf/include/c++/4.9.3/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/keypad_interface.d" -MT"src/keypad_interface.o" -o "src/keypad_interface.o" "../src/keypad_interface.cpp"
-Finished building: ../src/keypad_interface.cpp
- 
-Building target: keypad_interface
-Invoking: Cross G++ Linker
-arm-linux-gnueabihf-g++ -L/home/devil/Documents/tools/arm-bcm2708/arm-linux-gnueabihf/. -o "keypad_interface"  ./src/keypad_interface.o ./src/piHiPri.o ./src/softPwm.o ./src/softTone.o ./src/wiringPi.o   -lpthread
-Finished building target: keypad_interface
- 
-make --no-print-directory post-build
-scp keypad_interface pi@dex.local:/home/pi/cross_toolchain_test
- 
-02:05:05 **** Incremental Build of configuration Debug for project keypad_interface ****
-make all 
-Building file: ../src/keypad_interface.cpp
-Invoking: Cross G++ Compiler
-arm-linux-gnueabihf-g++ -I/home/devil/Documents/tools/arm-bcm2708/arm-linux-gnueabihf/arm-linux-gnueabihf/include/c++/4.9.3/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/keypad_interface.d" -MT"src/keypad_interface.o" -o "src/keypad_interface.o" "../src/keypad_interface.cpp"
-Finished building: ../src/keypad_interface.cpp
- 
-Building target: keypad_interface
-Invoking: Cross G++ Linker
-arm-linux-gnueabihf-g++ -L/home/devil/Documents/tools/arm-bcm2708/arm-linux-gnueabihf/. -o "keypad_interface"  ./src/keypad_interface.o ./src/piHiPri.o ./src/softPwm.o ./src/softTone.o ./src/wiringPi.o   -lpthread
-Finished building target: keypad_interface
- 
-make --no-print-directory post-build
-scp keypad_interface pi@dex.local:/home/pi/cross_toolchain_test
- 
-02:06:51 **** Incremental Build of configuration Debug for project keypad_interface ****
-make all 
-Building file: ../src/keypad_interface.cpp
-Invoking: Cross G++ Compiler
-arm-linux-gnueabihf-g++ -I/home/devil/Documents/tools/arm-bcm2708/arm-linux-gnueabihf/arm-linux-gnueabihf/include/c++/4.9.3/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/keypad_interface.d" -MT"src/keypad_interface.o" -o "src/keypad_interface.o" "../src/keypad_interface.cpp"
-Finished building: ../src/keypad_interface.cpp
- 
-Building target: keypad_interface
-Invoking: Cross G++ Linker
-arm-linux-gnueabihf-g++ -L/home/devil/Documents/tools/arm-bcm2708/arm-linux-gnueabihf/. -o "keypad_interface"  ./src/keypad_interface.o ./src/piHiPri.o ./src/softPwm.o ./src/softTone.o ./src/wiringPi.o   -lpthread
-Finished building target: keypad_interface
- 
-make --no-print-directory post-build
-scp keypad_interface pi@dex.local:/home/pi/cross_toolchain_test
- 
-02:08:24 **** Incremental Build of configuration Debug for project keypad_interface ****
-make all 
-Building file: ../src/keypad_interface.cpp
-Invoking: Cross G++ Compiler
-arm-linux-gnueabihf-g++ -I/home/devil/Documents/tools/arm-bcm2708/arm-linux-gnueabihf/arm-linux-gnueabihf/include/c++/4.9.3/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/keypad_interface.d" -MT"src/keypad_interface.o" -o "src/keypad_interface.o" "../src/keypad_interface.cpp"
-Finished building: ../src/keypad_interface.cpp
- 
-Building target: keypad_interface
-Invoking: Cross G++ Linker
-arm-linux-gnueabihf-g++ -L/home/devil/Documents/tools/arm-bcm2708/arm-linux-gnueabihf/. -o "keypad_interface"  ./src/keypad_interface.o ./src/piHiPri.o ./src/softPwm.o ./src/softTone.o ./src/wiringPi.o   -lpthread
-Finished building target: keypad_interface
- 
-make --no-print-directory post-build
-scp keypad_interface pi@dex.local:/home/pi/cross_toolchain_test
- 
-02:13:27 **** Incremental Build of configuration Debug for project keypad_interface ****
-make all 
-Building file: ../src/keypad_interface.cpp
-Invoking: Cross G++ Compiler
-arm-linux-gnueabihf-g++ -I/home/devil/Documents/tools/arm-bcm2708/arm-linux-gnueabihf/arm-linux-gnueabihf/include/c++/4.9.3/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/keypad_interface.d" -MT"src/keypad_interface.o" -o "src/keypad_interface.o" "../src/keypad_interface.cpp"
-Finished building: ../src/keypad_interface.cpp
- 
-Building target: keypad_interface
-Invoking: Cross G++ Linker
-arm-linux-gnueabihf-g++ -L/home/devil/Documents/tools/arm-bcm2708/arm-linux-gnueabihf/. -o "keypad_interface"  ./src/keypad_interface.o ./src/piHiPri.o ./src/softPwm.o ./src/softTone.o ./src/wiringPi.o   -lpthread
-Finished building target: keypad_interface
- 
-make --no-print-directory post-build
-scp keypad_interface pi@dex.local:/home/pi/cross_toolchain_test
- 
-02:14:48 **** Incremental Build of configuration Debug for project keypad_interface ****
-make all 
-Building file: ../src/keypad_interface.cpp
-Invoking: Cross G++ Compiler
-arm-linux-gnueabihf-g++ -I/home/devil/Documents/tools/arm-bcm2708/arm-linux-gnueabihf/arm-linux-gnueabihf/include/c++/4.9.3/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/keypad_interface.d" -MT"src/keypad_interface.o" -o "src/keypad_interface.o" "../src/keypad_interface.cpp"
-Finished building: ../src/keypad_interface.cpp
- 
-Building target: keypad_interface
-Invoking: Cross G++ Linker
-arm-linux-gnueabihf-g++ -L/home/devil/Documents/tools/arm-bcm2708/arm-linux-gnueabihf/. -o "keypad_interface"  ./src/keypad_interface.o ./src/piHiPri.o ./src/softPwm.o ./src/softTone.o ./src/wiringPi.o   -lpthread
-Finished building target: keypad_interface
- 
-make --no-print-directory post-build
-scp keypad_interface pi@dex.local:/home/pi/cross_toolchain_test
- 
-02:16:23 **** Incremental Build of configuration Debug for project keypad_interface ****
-make all 
-Building file: ../src/keypad_interface.cpp
-Invoking: Cross G++ Compiler
-arm-linux-gnueabihf-g++ -I/home/devil/Documents/tools/arm-bcm2708/arm-linux-gnueabihf/arm-linux-gnueabihf/include/c++/4.9.3/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/keypad_interface.d" -MT"src/keypad_interface.o" -o "src/keypad_interface.o" "../src/keypad_interface.cpp"
-Finished building: ../src/keypad_interface.cpp
- 
-Building target: keypad_interface
-Invoking: Cross G++ Linker
-arm-linux-gnueabihf-g++ -L/home/devil/Documents/tools/arm-bcm2708/arm-linux-gnueabihf/. -o "keypad_interface"  ./src/keypad_interface.o ./src/piHiPri.o ./src/softPwm.o ./src/softTone.o ./src/wiringPi.o   -lpthread
-Finished building target: keypad_interface
- 
-make --no-print-directory post-build
-scp keypad_interface pi@dex.local:/home/pi/cross_toolchain_test
-scp: /home/pi/cross_toolchain_test/keypad_interface: Text file busy
-makefile:58: recipe for target 'post-build' failed
-make[1]: [post-build] Error 1 (ignored)
- 
-02:16:36 **** Incremental Build of configuration Debug for project keypad_interface ****
+22:10:05 **** Incremental Build of configuration Debug for project keypad_interface ****
 make all 
 make: Nothing to be done for 'all'.
-02:18:09 **** Incremental Build of configuration Debug for project keypad_interface ****
+22:10:05 **** Incremental Build of configuration Debug for project server_conn ****
 make all 
-Building file: ../src/keypad_interface.cpp
+Building file: ../src/server_main.cpp
 Invoking: Cross G++ Compiler
-arm-linux-gnueabihf-g++ -I/home/devil/Documents/tools/arm-bcm2708/arm-linux-gnueabihf/arm-linux-gnueabihf/include/c++/4.9.3/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/keypad_interface.d" -MT"src/keypad_interface.o" -o "src/keypad_interface.o" "../src/keypad_interface.cpp"
-Finished building: ../src/keypad_interface.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/server_main.d" -MT"src/server_main.o" -o "src/server_main.o" "../src/server_main.cpp"
+Finished building: ../src/server_main.cpp
  
-Building target: keypad_interface
+Building target: server_conn
 Invoking: Cross G++ Linker
-arm-linux-gnueabihf-g++ -L/home/devil/Documents/tools/arm-bcm2708/arm-linux-gnueabihf/. -o "keypad_interface"  ./src/keypad_interface.o ./src/piHiPri.o ./src/softPwm.o ./src/softTone.o ./src/wiringPi.o   -lpthread
-Finished building target: keypad_interface
+g++  -o "server_conn"  ./src/SocketServer.o ./src/server_main.o   
+Finished building target: server_conn
  
-make --no-print-directory post-build
-scp keypad_interface pi@dex.local:/home/pi/cross_toolchain_test
- 
-02:19:05 **** Incremental Build of configuration Debug for project keypad_interface ****
+22:23:42 **** Incremental Build of configuration Debug for project keypad_interface ****
 make all 
-Building file: ../src/keypad_interface.cpp
-Invoking: Cross G++ Compiler
-arm-linux-gnueabihf-g++ -I/home/devil/Documents/tools/arm-bcm2708/arm-linux-gnueabihf/arm-linux-gnueabihf/include/c++/4.9.3/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/keypad_interface.d" -MT"src/keypad_interface.o" -o "src/keypad_interface.o" "../src/keypad_interface.cpp"
-Finished building: ../src/keypad_interface.cpp
- 
-Building target: keypad_interface
-Invoking: Cross G++ Linker
-arm-linux-gnueabihf-g++ -L/home/devil/Documents/tools/arm-bcm2708/arm-linux-gnueabihf/. -o "keypad_interface"  ./src/keypad_interface.o ./src/piHiPri.o ./src/softPwm.o ./src/softTone.o ./src/wiringPi.o   -lpthread
-Finished building target: keypad_interface
- 
-make --no-print-directory post-build
-scp keypad_interface pi@dex.local:/home/pi/cross_toolchain_test
- 
-02:19:38 **** Incremental Build of configuration Debug for project keypad_interface ****
+make: Nothing to be done for 'all'.
+22:23:42 **** Incremental Build of configuration Debug for project server_conn ****
 make all 
-Building file: ../src/keypad_interface.cpp
+Building file: ../src/server_main.cpp
 Invoking: Cross G++ Compiler
-arm-linux-gnueabihf-g++ -I/home/devil/Documents/tools/arm-bcm2708/arm-linux-gnueabihf/arm-linux-gnueabihf/include/c++/4.9.3/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/keypad_interface.d" -MT"src/keypad_interface.o" -o "src/keypad_interface.o" "../src/keypad_interface.cpp"
-Finished building: ../src/keypad_interface.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/server_main.d" -MT"src/server_main.o" -o "src/server_main.o" "../src/server_main.cpp"
+Finished building: ../src/server_main.cpp
  
-Building target: keypad_interface
+Building target: server_conn
 Invoking: Cross G++ Linker
-arm-linux-gnueabihf-g++ -L/home/devil/Documents/tools/arm-bcm2708/arm-linux-gnueabihf/. -o "keypad_interface"  ./src/keypad_interface.o ./src/piHiPri.o ./src/softPwm.o ./src/softTone.o ./src/wiringPi.o   -lpthread
-Finished building target: keypad_interface
+g++  -o "server_conn"  ./src/SocketServer.o ./src/server_main.o   
+Finished building target: server_conn
  
-make --no-print-directory post-build
-scp keypad_interface pi@dex.local:/home/pi/cross_toolchain_test
+22:27:06 **** Incremental Build of configuration Debug for project keypad_interface ****
+make all 
+make: Nothing to be done for 'all'.
+22:27:07 **** Incremental Build of configuration Debug for project server_conn ****
+make all 
+Building file: ../src/server_main.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/server_main.d" -MT"src/server_main.o" -o "src/server_main.o" "../src/server_main.cpp"
+Finished building: ../src/server_main.cpp
+ 
+Building target: server_conn
+Invoking: Cross G++ Linker
+g++  -o "server_conn"  ./src/SocketServer.o ./src/server_main.o   
+Finished building target: server_conn
+ 
+22:28:00 **** Incremental Build of configuration Debug for project keypad_interface ****
+make all 
+make: Nothing to be done for 'all'.
+22:28:01 **** Incremental Build of configuration Debug for project server_conn ****
+make all 
+Building file: ../src/server_main.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/server_main.d" -MT"src/server_main.o" -o "src/server_main.o" "../src/server_main.cpp"
+Finished building: ../src/server_main.cpp
+ 
+Building target: server_conn
+Invoking: Cross G++ Linker
+g++  -o "server_conn"  ./src/SocketServer.o ./src/server_main.o   
+Finished building target: server_conn
+ 
+22:47:28 **** Incremental Build of configuration Debug for project keypad_interface ****
+make all 
+make: Nothing to be done for 'all'.
+22:47:28 **** Incremental Build of configuration Debug for project server_conn ****
+make all 
+Building file: ../src/server_main.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/server_main.d" -MT"src/server_main.o" -o "src/server_main.o" "../src/server_main.cpp"
+Finished building: ../src/server_main.cpp
+ 
+Building target: server_conn
+Invoking: Cross G++ Linker
+g++  -o "server_conn"  ./src/SocketServer.o ./src/server_main.o   
+Finished building target: server_conn
+ 
+22:49:18 **** Incremental Build of configuration Debug for project keypad_interface ****
+make all 
+make: Nothing to be done for 'all'.
+22:49:18 **** Incremental Build of configuration Debug for project server_conn ****
+make all 
+Building file: ../src/server_main.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/server_main.d" -MT"src/server_main.o" -o "src/server_main.o" "../src/server_main.cpp"
+Finished building: ../src/server_main.cpp
+ 
+Building target: server_conn
+Invoking: Cross G++ Linker
+g++  -o "server_conn"  ./src/SocketServer.o ./src/server_main.o   
+Finished building target: server_conn
+ 
+22:50:30 **** Incremental Build of configuration Debug for project keypad_interface ****
+make all 
+make: Nothing to be done for 'all'.
+22:50:30 **** Incremental Build of configuration Debug for project server_conn ****
+make all 
+Building file: ../src/server_main.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/server_main.d" -MT"src/server_main.o" -o "src/server_main.o" "../src/server_main.cpp"
+Finished building: ../src/server_main.cpp
+ 
+Building target: server_conn
+Invoking: Cross G++ Linker
+g++  -o "server_conn"  ./src/SocketServer.o ./src/server_main.o   
+Finished building target: server_conn
+ 
+22:51:23 **** Incremental Build of configuration Debug for project keypad_interface ****
+make all 
+make: Nothing to be done for 'all'.
+22:51:23 **** Incremental Build of configuration Debug for project server_conn ****
+make all 
+Building file: ../src/server_main.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/server_main.d" -MT"src/server_main.o" -o "src/server_main.o" "../src/server_main.cpp"
+Finished building: ../src/server_main.cpp
+ 
+Building target: server_conn
+Invoking: Cross G++ Linker
+g++  -o "server_conn"  ./src/SocketServer.o ./src/server_main.o   
+Finished building target: server_conn
+ 
+22:52:07 **** Incremental Build of configuration Debug for project keypad_interface ****
+make all 
+make: Nothing to be done for 'all'.
+22:52:08 **** Incremental Build of configuration Debug for project server_conn ****
+make all 
+Building file: ../src/server_main.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/server_main.d" -MT"src/server_main.o" -o "src/server_main.o" "../src/server_main.cpp"
+Finished building: ../src/server_main.cpp
+ 
+Building target: server_conn
+Invoking: Cross G++ Linker
+g++  -o "server_conn"  ./src/SocketServer.o ./src/server_main.o   
+Finished building target: server_conn
+ 
+22:52:23 **** Incremental Build of configuration Debug for project keypad_interface ****
+make all 
+make: Nothing to be done for 'all'.
+22:52:24 **** Incremental Build of configuration Debug for project server_conn ****
+make all 
+Building file: ../src/server_main.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/server_main.d" -MT"src/server_main.o" -o "src/server_main.o" "../src/server_main.cpp"
+Finished building: ../src/server_main.cpp
+ 
+Building target: server_conn
+Invoking: Cross G++ Linker
+g++  -o "server_conn"  ./src/SocketServer.o ./src/server_main.o   
+Finished building target: server_conn
+ 
+22:52:52 **** Incremental Build of configuration Debug for project keypad_interface ****
+make all 
+make: Nothing to be done for 'all'.
+22:52:52 **** Incremental Build of configuration Debug for project server_conn ****
+make all 
+Building file: ../src/server_main.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/server_main.d" -MT"src/server_main.o" -o "src/server_main.o" "../src/server_main.cpp"
+Finished building: ../src/server_main.cpp
+ 
+Building target: server_conn
+Invoking: Cross G++ Linker
+g++  -o "server_conn"  ./src/SocketServer.o ./src/server_main.o   
+Finished building target: server_conn
+ 
+22:53:13 **** Incremental Build of configuration Debug for project keypad_interface ****
+make all 
+make: Nothing to be done for 'all'.
+22:53:14 **** Incremental Build of configuration Debug for project server_conn ****
+make all 
+Building file: ../src/server_main.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/server_main.d" -MT"src/server_main.o" -o "src/server_main.o" "../src/server_main.cpp"
+Finished building: ../src/server_main.cpp
+ 
+Building target: server_conn
+Invoking: Cross G++ Linker
+g++  -o "server_conn"  ./src/SocketServer.o ./src/server_main.o   
+Finished building target: server_conn
+ 
+22:54:19 **** Incremental Build of configuration Debug for project keypad_interface ****
+make all 
+make: Nothing to be done for 'all'.
+22:54:20 **** Incremental Build of configuration Debug for project server_conn ****
+make all 
+Building file: ../src/server_main.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/server_main.d" -MT"src/server_main.o" -o "src/server_main.o" "../src/server_main.cpp"
+Finished building: ../src/server_main.cpp
+ 
+Building target: server_conn
+Invoking: Cross G++ Linker
+g++  -o "server_conn"  ./src/SocketServer.o ./src/server_main.o   
+Finished building target: server_conn
+ 
+22:54:51 **** Incremental Build of configuration Debug for project keypad_interface ****
+make all 
+make: Nothing to be done for 'all'.
+22:54:52 **** Incremental Build of configuration Debug for project server_conn ****
+make all 
+Building file: ../src/server_main.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/server_main.d" -MT"src/server_main.o" -o "src/server_main.o" "../src/server_main.cpp"
+Finished building: ../src/server_main.cpp
+ 
+Building target: server_conn
+Invoking: Cross G++ Linker
+g++  -o "server_conn"  ./src/SocketServer.o ./src/server_main.o   
+Finished building target: server_conn
+ 
+22:55:26 **** Incremental Build of configuration Debug for project keypad_interface ****
+make all 
+make: Nothing to be done for 'all'.
+22:55:27 **** Incremental Build of configuration Debug for project server_conn ****
+make all 
+Building file: ../src/server_main.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/server_main.d" -MT"src/server_main.o" -o "src/server_main.o" "../src/server_main.cpp"
+Finished building: ../src/server_main.cpp
+ 
+Building target: server_conn
+Invoking: Cross G++ Linker
+g++  -o "server_conn"  ./src/SocketServer.o ./src/server_main.o   
+Finished building target: server_conn
  

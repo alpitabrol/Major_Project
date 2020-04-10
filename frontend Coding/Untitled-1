@@ -1,19 +1,17 @@
 <!doctype html>
-<html lang="en"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
 Login Page
 </title>
 
 
-<!-- demo scripts -->
+<for style>
 <link rel="stylesheet" href="style.css">
 
-<body>
 
-<div class="demo-meta">
-  <h1 class="demo-title">Login Page</h1>
-  <p class="demo-desc">Welcome to the Nutritional Tracker.</p>
+<div class=>
+  
+ 
 </div>
 
 
@@ -25,6 +23,7 @@ Login Page
 				<input type="username" name="username" placeholder="Your Name" required>
 			</li>
 							<input type="submit" value="Login">
+                                
 			</li>
 		</ul>
 	</form>

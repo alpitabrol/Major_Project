@@ -1,31 +1,12 @@
-/*#include "wiringPi.h"
-#include<iostream>
-#include <string.h>
-#define ROWS 4
-#define COLS 3
-using namespace std;
-
-
-//defining universal variables
-int rowVal = -1, colVal = -1;
-int c=0,r=0;
-
-//assigning the pins attached from keypad to raspberry pi
-int rowPins[ROWS] = {21,22,23,24};
-int colPins[COLS] = {25,27,28};
-
-char keys[ROWS][COLS] =
-{
-   {'1', '2', '3'},
-   {'4', '5', '6'},
-   {'7', '8', '9'},
-   {'*', '0', '#'}
-};
-
-//function for scanning rows for pushed button
-
+#include <iostream>
+#include "SocketClient.h"
 #include "keypad_interface.h"
 
+
+using namespace std;
+using namespace exploringRPi;
+
+//function for scanning rows for pushed button
 int findrow()
 {
 
@@ -124,9 +105,9 @@ int  get_key()
 
 }
 
-//Main function
-int main(void)
+int main(int argc, char *argv[])
 {
+
 	 wiringPiSetup();
 	 int check = 1, start_shopping = 0 , weight_code=1;
 	 string code = "";
@@ -134,6 +115,7 @@ int main(void)
 	 string temp_list[20][2];
 	 string shopping_list[20][2];
 	 int temp_list_row = 0;
+
 	 cout<<"Enter 1111# for Start Shopping.\n"<<endl;
 
 	 while(check)
@@ -204,7 +186,6 @@ int main(void)
 									digit='\0';
 								}
 							}
-
 						 }
 
 			 else
@@ -226,27 +207,42 @@ int main(void)
 			digit = '\0';
 			cout<<"Code so far: "<<code<<endl;
 		 }
-
-
 		   delay(500);
-
-
 	 }
-
+int entered_items = 0;
 cout<<"Item's Code	Weight(lbs)"<<endl;
 for(int i=0;i<temp_list_row;i++)
 {
 	for(int j=0 ; j < 2 ; j++)
 	{
 		cout<<shopping_list[i][j]<<" 		";
+		entered_items = i+1;
 	}
 cout<<endl;
 }
 
+	if(argc!=2)
+	{
+      cout << "Incorrect usage: " << endl;
+      cout << "   client server_name" << endl;
+      return 2;
+	}
 
-return 0;
+   cout << "Sending entered code and weight to server" << endl;
+   SocketClient sc(argv[1], 54321);
+   sc.connectToServer();
 
+
+   string msg="";
+   for(int i=0;i<entered_items;i++)
+   {
+   	   for (int j=0;j<2;j++)
+   	   {
+   		  msg += shopping_list[i][j];
+   		  msg +="#";
+   	   }
+    }
+		   sc.send(msg);
+
+	 cout << "Processing for client side ended" << endl;
 }
-*/
-
-
