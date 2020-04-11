@@ -1,23 +1,22 @@
 #include <iostream>
 #include "SocketServer.h"
-#include <vector>
-#include <boost/algorithm/string.hpp>
-#include <math.h>
+#include <string.h>
 #include <sstream>
 #include<fstream>
 #include<sstream>
-//#include"data_import_file.cpp"
-//using namespace std;
+
+using namespace std;
 using namespace exploringRPi;
 
 int main(int argc, char *argv[]){
 
-/*
+
 SocketServer server(54321);
 server.listen();
 string msg = server.receive(1024);
 
-
+//	string msg = "4011#2#94011#3#4032#4#";
+//string msg = "4219#3#33933#3#84186#1#4049#3#";
 int rec_msg_size = msg.size();
 char msg_char_array[rec_msg_size + 1];
 
@@ -72,41 +71,123 @@ for(int i=0;i<weight_counter;i++)
 cout<<user_input_weight[i];
 cout<<endl;
 }
-*/
 
-std:: string data[306][6];
-    std:: ifstream file("data.csv");
+
+string data[306][6];
+    ifstream file("data.csv");
 
     for (int row = 0; row < 306; ++row)
     {
-    	std:: string line;
-    	std:: getline(file,line);
+    	string line;
+    	getline(file,line);
     	if(!file.good())
     	break;
 
-    	std::stringstream iss(line);
+    	stringstream iss(line);
 
 		for (int col = 0; col < 6; ++col)
 		{
-			std:: string val;
-			std:: getline(iss,val,',');
+			string val;
+			getline(iss,val,',');
 			if(!iss.good())
 			break;
 
-		std:: stringstream convertor(val);
+		stringstream convertor(val);
 		convertor >> data[row][col];
 		}
 	}
 
-    for (int i = 0; i < 306; ++i)
+  /*b  for (int i = 0; i < 306; ++i)
     {
 		for (int j = 0; j < 6; ++j)
 		{
-			std:: cout<<data[i][j]<<" ";
+			cout<<data[i][j]<<" ";
 		}
-	std:: cout<<"\n";
+	cout<<"\n";
     }
+cout<<data[305][0]<<endl;
+*/
 
 
-   return 0;
+
+string user_input_info[code_counter][7];
+int user_input_info_counter = 0;
+int temp_code_weight_counter =0;
+for (int i = 1; i < 306; ++i)
+{
+	if(data[i][0] == user_input_code[temp_code_weight_counter])
+	{
+		for (int x = 0; x < 6; ++x)
+		{
+			user_input_info[user_input_info_counter][x] = data[i][x];
+		}
+		user_input_info[user_input_info_counter][6] = user_input_weight[temp_code_weight_counter];
+		temp_code_weight_counter++;
+		user_input_info_counter++;
+	}
 }
+
+
+string second_page_info[code_counter][5];
+
+//inserting values as per second page requirements
+ for (int i = 0; i < code_counter; ++i)
+ {
+	 second_page_info[i][0]=user_input_info[i][0]; //plu code
+	 second_page_info[i][1]=user_input_info[i][1]; //name
+	 second_page_info[i][2]=user_input_info[i][2]; //variety
+	 second_page_info[i][3]=user_input_info[i][3]; //size
+	 second_page_info[i][4]=user_input_info[i][6]; //weight bought
+
+}
+
+ for (int i = 0; i < code_counter; ++i)
+ {
+ 	for (int j = 0; j < 5; ++j)
+ 	{
+ 		cout<<second_page_info[i][j]<<" ";
+ 	}
+ cout<<"\n";
+ }
+
+ //PLU_Code,	Name,	Variety,	Size,	Pieces_In_A_LB,	Portions_In_A_LB,	bought_weight
+ // 0			1		2			3		4				5					6
+ int portions_bought[code_counter];
+ int pieces_bought;
+
+ for (int i = 0; i < code_counter; ++i)
+ {
+
+	 if( stoi(user_input_info[i][4])== 1 )
+	 {
+		 portions_bought[i] = stoi(user_input_info[i][5]) * stoi(user_input_info[i][6]);
+	 }
+	 else
+	 {
+
+	 pieces_bought = stoi(user_input_info[i][6]) * stoi(user_input_info[i][4]);
+
+	 portions_bought[i] = pieces_bought / stoi(user_input_info[i][5]);
+
+	 }
+
+	 cout<<portions_bought[i]<<endl;
+ }
+
+ string portion_bought_string[code_counter];
+
+ for (int i = 0; i < code_counter; ++i)
+ 	 {
+	 	 portion_bought_string[i]=to_string(portions_bought[i]);
+ 	 }
+
+
+ //string analysed_string[5][5];
+
+
+
+
+    return 0;
+ }
+
+
