@@ -10,20 +10,22 @@ using namespace exploringRPi;
 
 int main(int argc, char *argv[]){
 
-
+/*
 SocketServer server(54321);
 server.listen();
 string msg = server.receive(1024);
+*/
+string msg = "4132#2#4186#3#4060#2#4030#2#4631#2#4380#2#3155#2#4052#1#";
 
-//	string msg = "4011#2#94011#3#4032#4#";
 //string msg = "4219#3#33933#3#84186#1#4049#3#";
+
 int rec_msg_size = msg.size();
 char msg_char_array[rec_msg_size + 1];
 
 strcpy(msg_char_array, msg.c_str());
 
 
-string msg_to_str[20];
+string msg_to_str[200];
 string temp_str="";
 int msg_str_counter = 0;
 
@@ -74,7 +76,7 @@ cout<<endl;
 
 
 string data[306][6];
-    ifstream file("data.csv");
+    ifstream file("/home/devil/Desktop/NUTRITIONAL-TRACKER/cross_toolchain/server_conn/Debug/data.csv");
 
     for (int row = 0; row < 306; ++row)
     {
@@ -128,7 +130,7 @@ for (int i = 1; i < 306; ++i)
 }
 
 
-string second_page_info[code_counter][5];
+string second_page_info[code_counter][6];
 
 //inserting values as per second page requirements
  for (int i = 0; i < code_counter; ++i)
@@ -143,7 +145,7 @@ string second_page_info[code_counter][5];
 
  for (int i = 0; i < code_counter; ++i)
  {
- 	for (int j = 0; j < 5; ++j)
+ 	for (int j = 0; j < 6; ++j)
  	{
  		cout<<second_page_info[i][j]<<" ";
  	}
@@ -181,13 +183,30 @@ string second_page_info[code_counter][5];
 	 	 portion_bought_string[i]=to_string(portions_bought[i]);
  	 }
 
+ for (int i = 0; i < code_counter; ++i)
+ {
+	 second_page_info[i][0]=user_input_info[i][0]; //plu code
+	 second_page_info[i][1]=user_input_info[i][1]; //name
+	 second_page_info[i][2]=user_input_info[i][2]; //variety
+	 second_page_info[i][3]=user_input_info[i][3]; //size
+	 second_page_info[i][4]=user_input_info[i][6]; //weight bought
+	 second_page_info[i][5]=portion_bought_string[i]; //number of portions bought
+}
 
+ for (int i = 0; i < code_counter; ++i)
+ {
+ 	for (int j = 0; j < 6; ++j)
+ 	{
+ 		cout<<second_page_info[i][j]<<" ";
+ 	}
+ cout<<"\n";
+ }
  //string analysed_string[5][5];
 
 
 
 
-    return 0;
+return 0;
  }
 
 
