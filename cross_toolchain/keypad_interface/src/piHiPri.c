@@ -1,8 +1,8 @@
 
 #include <sched.h>
 #include <string.h>
+#include "../my_includes/wiringPi.h"
 
-#include "wiringPi.h"
 
 
 /*

@@ -1,10 +1,10 @@
 #include <iostream>
-#include "SocketServer.h"
+#include "../my_includes/SocketServer.h"
 #include <string.h>
 #include <sstream>
 #include <fstream>
 #include<sstream>
-#include "html_page_2.h"
+#include "../my_includes/html_page_2.h"
 using namespace std;
 using namespace exploringRPi;
 

@@ -1,4 +1,4 @@
-#include "SocketServer.h"
+#include "../my_includes/SocketServer.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>

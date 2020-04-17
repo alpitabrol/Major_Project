@@ -1,6 +1,6 @@
 #include <iostream>
-#include "SocketClient.h"
-#include "keypad_interface.h"
+#include "../my_includes/SocketClient.h"
+#include "../my_includes/keypad_interface.h"
 
 
 using namespace std;
