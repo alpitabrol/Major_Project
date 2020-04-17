@@ -116,7 +116,9 @@ int main(int argc, char *argv[])
 	 string shopping_list[20][2];
 	 int temp_list_row = 0;
 
-	 cout<<"Enter 1111# for Start Shopping.\n"<<endl;
+	 cout<<"Bonjour! I am a Keypad for Nutrtitonal Tracker 1.0\n"
+			 <<"I feed on PLU codes,make sure you enter a lot.\n\n"
+			 <<"To begin your shopping,press 1111#"<<endl;
 
 	 while(check)
 	 {
@@ -124,7 +126,7 @@ int main(int argc, char *argv[])
 		 {
 			 digit = get_key();
 		 }
-		 cout<<"digit pressed: "<<digit<<endl;
+		// cout<<"digit pressed: "<<digit<<endl;
 
 		 if(digit == '#' && (code.length()== 4 || code.length()==5) )
 		 {
@@ -133,7 +135,7 @@ int main(int argc, char *argv[])
 				 code = "";
 				 digit = '\0';
 				 start_shopping = 1;
-				 cout<<"Shopping Started"<<endl;
+				 cout<<"Yeah!It's time to track some nutrition!! Bang on with numbers!!"<<endl;
 			 }
 
 			 else if (code == "0000")
@@ -150,7 +152,7 @@ int main(int argc, char *argv[])
 						 shopping_list[i][j] = temp_list[i][j];
 					 }
 				 }
-				 cout<<"Shopping Ended :)"<<endl;
+				 cout<<"\nOuch! I ate a lot."<<endl;
 			 }
 
 			 else if (start_shopping==1 && (code.length() == 4 || code.length() == 5))
@@ -158,7 +160,7 @@ int main(int argc, char *argv[])
 
 							 temp_list[temp_list_row][0] = code;
 							 digit = '\0';
-							 cout<<"Enter weight(in lbs) for the Code Entered "<<code<<endl;//<<": ";
+							 cout<<"Please don't forgot to enter  the weight(lbs) for code"<<code<<endl;//<<": ";
 
 							 weight_code=1;
 
@@ -174,7 +176,7 @@ int main(int argc, char *argv[])
 								 temp_list[temp_list_row][1] = digit;
 								 cout<<"Weight Entered: "<<digit<<endl;
 
-								cout<<"Enter the code for next item or 0000# for finishing shopping"<<endl;
+								cout<<"Either enter the next code or end my system with 0000# :("<<endl;
 								 weight_code = 0;
 								 digit='\0';
 								 code = "";
@@ -210,7 +212,7 @@ int main(int argc, char *argv[])
 		   delay(500);
 	 }
 int entered_items = 0;
-cout<<"Item's Code	Weight(lbs)"<<endl;
+cout<<"PLU Codes	Weight(lbs)"<<endl;
 for(int i=0;i<temp_list_row;i++)
 {
 	for(int j=0 ; j < 2 ; j++)
@@ -228,7 +230,7 @@ cout<<endl;
       return 2;
 	}
 
-   cout << "Sending entered code and weight to server" << endl;
+   cout << "Now, transmitting the shopping list to server." << endl;
    SocketClient sc(argv[1], 54321);
    sc.connectToServer();
 
@@ -244,5 +246,5 @@ cout<<endl;
     }
 		   sc.send(msg);
 
-	 cout << "Processing for client side ended" << endl;
+	 cout << "Processing for Nutritional Tracker 1.0 Ended." << endl;
 }
