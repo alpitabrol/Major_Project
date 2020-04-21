@@ -6,14 +6,7 @@ On this database whole Project will work. It is classified into four different c
 1.Commodity	
 2.Variety	Size
 3.PLU Code	
-4.1 LB= ? Pieces	
-5.Portions
+4.Pieces_in_1_LB	
+5.Pieces_in_a_Portion.
 On this database, product will do the calculations.
-
-First, it was created in the Excel Sheet and then data from Microsoft Excel is imported into to Oracle Database by  using SQL Developer.
-Software used for the Conversion is the Oracle 10g.
-
-Database is uploaded in the form of the excel is the github.
-700 different types of fruits and vegetables are collected along with their PLU codes.Even, the grams in each lb is also presented
-In that chart.
-
+Then database is converted into csv form so that it can be used for calculations.
