@@ -2,24 +2,20 @@
 INTRODUCTION
 Nutritional Tracker is a device which will track the nutrition of the user in fraction of seconds. 
 According to 5-a-day Campaign by WHO, everyone should at least have 5 portions of different of fruit and
-vegetables every single day. This whole guide will emphasize on the concept of balance of every portion required for your body’s nutritional needs.
+vegetables every single day. This whole guide will emphasize on the concept of balance of every portion 
+required for your bodyâ€™s nutritional needs.
 
 CONCEPT AND METHODOLOGY
-application makes use of the smartphone camera 
-capabilities to capture the image of the grocery item or the 
-product image and its nutrition fact table (NFT). After 
-uploading the image, we use the image processing and cloud 
-technology to process, analyse and store the useful 
-information obtained. A client-server architecture is best 
-suited for this type of application. We have used an Android 
-smartphone as a client, and Node.js for the server. The image 
-processing is done using OpenCV. Parse is the cloud 
-database provider
 This embedded project is the combination of the hardware and software system.
-1.	Hardware System: Hardware system is defined as product code unit which will use Raspberry Pi zero with Keypad interfaced to enter PLU codes written on the fruits and vegetables. User can enter four- or five-digit code along with lbs bought.
-2.	Software System: Software part is code processing and display unit which will process the image and define the features of the whole project. Even, the hardware part will also be programmed which will be considered under this unit only. In this system, first the data will be pulled from the database and after calculations whole information will be displayed.
+1.Hardware System: Hardware system is defined as product code unit which will use Raspberry Pi zero 
+           with Keypad interfaced to enter PLU codes written on the fruits and vegetables. User can 
+	   enter four- or five-digit code along with lbs bought.
+2.Software System: Software part is code processing and display unit which will process the image and
+           define the features of the whole project. Even, the hardware part will also be programmed which 
+	   will be considered under this unit only. In this system, first the data will be pulled from the
+	   database and after calculations whole information will be displayed.
 
-#Weekly Plan for Execution of the Project:
+# Weekly Plan for Execution of the Project:
 
 To make NT 1.0, we had total of 14 weeks. It started from 
 planning the product and executing the whole idea into a working model.
