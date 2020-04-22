@@ -37,8 +37,7 @@ cout<< "<h2 class=\"loginform2 cf\"align=\"center\" style=\"color: FireBrick;\">
  <<"Tracker is the modern IOT product which promotes 5-a day strategy in our lives."
 <<"<br>Consuming 5 portions of fruit & veg is healthy way to complete balanced diet."
 <<"<br> This product keeps a track of your grocery bought and analyzes it for you in fraction of seconds."
-<<"<br>For Details:<a target=\"_blank\"href=\"https://github.com/alpitabrol"
-<<"/NUTRITIONAL-TRACKER/blob/master/Introduction\"</font\">\"Click here\"</a></font> </h2>"<<endl;
+<<"<br>For Details:<a target=\"_blank\"href=\"https://github.com/alpitabrol/NUTRITIONAL-TRACKER\"</font\">\"Click here\"</a></font> </h2>"<<endl;
 cout<< "<h3 align=\"center\" style=\"color: Black;\"><font size=\"6\">Let's get your 5 portion of Vegetables & Fruits!</font> </h3>"<<endl;
 cout<< "</div>"<<endl;
 cout<< "<div class=\"loginform cf\">"<<endl;
