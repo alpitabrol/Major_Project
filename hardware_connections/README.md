@@ -1,7 +1,9 @@
-# Webpages
+# Two Major Hardware Connections was done.
 
-Whole product has two webpages which are in this folder along with its images and code.
-These are the webpages which are developed with html5 and css and executed in c++ code
-so that eclipse can use.
+Connecting RPI Wirelessly
+Interfacing of Keypad with RPI
+
+
+
 
 
