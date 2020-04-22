@@ -9,5 +9,6 @@ On this database whole Project will work. It is classified into five different c
 4.Pieces_in_1_LB	
 5.Pieces_in_a_Portion.
 
-On this database, product will do the calculations.
+By using this database, product will do the calculations. 
 Then database is converted into csv form so that it can be used for calculations.
+
