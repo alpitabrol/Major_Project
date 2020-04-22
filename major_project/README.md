@@ -1,10 +1,10 @@
 
-# Things needed to there before building the project:
+# Things needed to be there before building the project:
 
 1. Eclipse IDE should be there installed in the linux system.
 2. Raspberry Pi should be connected to the machine, should be able to send files either through cross-tool chain or through FTP
 3. Keypad matrix should be connected properly to the Raspberry Pi.
-4. Nginx software should be properly installed and should in working condtion.
+4. Nginx software should be properly installed and should be in the working condtion.
 5. Both raspberry pi and system should be connected to the same network.
 
 
@@ -17,4 +17,7 @@
 5. Open you browser and run the link: localhost/cgi-bin/page_one_html/ "NOTE: The file names for the object files made should be same as      it is there in the repsitory."
 6. Click on start shopping after entering your name. Then it will wait for the response from the keypad.
 7. For giving the input run the object file trasnfered to raspberry pi and start entering the PLU codes, once you are done with the          shopping 	list, the final page will be automatically displayed on your machine browser.
+
+For Refrence: Use Derek Molloy Book Chapter 12:
+https://raks.ee/books/pdf/exploringraspberrypi.pdf
 
