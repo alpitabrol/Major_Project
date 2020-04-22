@@ -8,7 +8,11 @@ Nutritional Tracker is modern product for those people who wants to complete the
 
 # Programming Languages: C++ & html5
 
-#Video Link that how it will work:
+#Video Link to show how it will work:
 https://www.youtube.com/watch?v=z05x-hJy9mc&t=49s
+
+![image](https://github.com/alpitabrol/NUTRITIONAL-TRACKER/blob/master/working_project_images/step%201.png)
+![image](https://github.com/alpitabrol/NUTRITIONAL-TRACKER/blob/master/working_project_images/Final%20Product01.jpg)
+
 
 
