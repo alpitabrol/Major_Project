@@ -11,7 +11,7 @@
 # Steps for running code in your machine
 
 1. Clone the repository in your machine.
-2. open all three projects(server_conn, keypad_interface and page_one_html) above mentioned in eclipse.
+2. Open all three projects(server_conn, keypad_interface and page_one_html) above mentioned in eclipse.
 3. Firstly build the keypad_interface project, and transfer the object file of the project to raspberry pi folder from where you want to      call the program for interfacing keypad.
 4. Secondly, build the other two projects: server_conn and page_one_html one by one and transfer the object files for both of them to        nginx folder of your machine i.e.: /usr/lib/cgi-bin/
 5. Open you browser and run the link: localhost/cgi-bin/page_one_html/ "NOTE: The file names for the object files made should be same as      it is there in the repsitory."
