@@ -1,0 +1,21 @@
+21:54:51 **** Incremental Build of configuration Debug for project test ****
+make all 
+make: Nothing to be done for 'all'.
+21:58:11 **** Incremental Build of configuration Debug for project server_conn ****
+make all 
+make: Nothing to be done for 'all'.
+21:58:12 **** Incremental Build of configuration Debug for project test ****
+make all 
+Building file: ../test1.cpp
+Invoking: Cross G++ Compiler
+g++ -I/usr/include/mysql -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"test1.d" -MT"test1.o" -o "test1.o" "../test1.cpp"
+Finished building: ../test1.cpp
+ 
+Building target: test
+Invoking: Cross G++ Linker
+g++ -L/usr/lib -o "test"  ./.metadata/.plugins/org.eclipse.cdt.managedbuilder.core/spec.o  ./.metadata/.plugins/org.eclipse.cdt.make.core/specs.o  ./test1.o ./test2.o   -lmysqlclient
+Finished building target: test
+ 
+21:58:16 **** Incremental Build of configuration Debug for project test_project ****
+make all 
+make: Nothing to be done for 'all'.

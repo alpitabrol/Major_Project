@@ -1,0 +1,21 @@
+#include<iostream>
+
+using namespace std;
+int main()
+{
+cout<< "Content-type: text/html; charset=utf-8 \n\n"<<endl;
+//for style
+cout <<"<link rel =\"stylesheet\"; href=\"style.css\">" <<endl;
+cout<< "<html><body>"<<endl;
+cout<< "<h1>NUTRITIONAL TRACKER </h1>"<<endl;
+cout<< "</div>"<<endl;
+cout<< "<div class=\"loginform cf\">"<<endl;
+cout << "<form name=\"login\" action=\"index_submit\" method=\"get\" accept-charset=\"utf-8\">"<<endl;
+cout<< "<ul>"<<endl;
+cout<< "<li>"<<endl;
+cout<< "<label for=\"username\">Username</label>"<<endl;
+
+cout<< "<div id=\"button\"><a href=\"test2\">Log In</a></div>";
+cout<< "</body></html>";
+return 0;
+}

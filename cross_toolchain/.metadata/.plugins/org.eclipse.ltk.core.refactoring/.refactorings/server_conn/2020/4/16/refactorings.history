@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;server_conn/src/html_page_2&apos; to &apos;html_page_2.h&apos;" description="Rename resource &apos;html_page_2&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/html_page_2" name="html_page_2.h" stamp="1586964682454" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;server_conn/src/server_main.cpp&apos; to &apos;main_prog_server.cpp&apos;" description="Rename resource &apos;server_main.cpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/server_main.cpp" name="main_prog_server.cpp" stamp="1587133791453" updateReferences="true"/>
+</session>

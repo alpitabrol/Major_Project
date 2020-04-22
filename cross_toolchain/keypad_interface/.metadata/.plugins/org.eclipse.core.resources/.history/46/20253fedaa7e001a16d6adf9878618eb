@@ -1,0 +1,42 @@
+#include<iostream>
+
+using namespace std;
+int main()
+{
+
+	cout<< "<style>" <<endl;
+	cout<< "html{font-size:10 pt;}" <<endl;
+	cout<<"body{ background-image: url(https://i1.wp.com/www.jbessentialfitness.co.uk/wp-content/uploads/2019/03/5-a-day_cmyk3_v_Variation_1.png?w=672&ssl=1);} "<<endl;
+	cout<<"</style> "<<endl;
+cout<< "Content-type: text/html\n\n"<<endl;
+cout<< "<html><body>"<<endl;
+
+
+cout<< "<h1>You have purchased those items today. </h1>"<<endl;
+
+string a[2][2]={{"94011","2"},{"4011","1"}};
+
+cout<<" <table border=1 style=\"width:100%\" >"<<endl ;
+cout<<" <tr>"<<endl;
+cout<<" <th>PLU CODE</th> "<<endl;
+cout<<" <th> Weight </th> "<<endl;
+cout<<" </tr> "<<endl;
+
+for(int i=0 ; i<2 ; i++)
+{
+cout<<"<tr>"<<endl; 
+	for(int j=0 ;j<2 ; j++)
+	{ 
+		cout<<"<td>"<<a[i][j]<<"</td>"<<endl; 
+	}
+
+cout<<" </tr>"<<endl;
+}
+cout<< "</table>"<<endl;
+
+cout<< "</body></html>";
+
+
+return 0;
+}
+

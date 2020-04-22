@@ -1,0 +1,1 @@
+void html_page(int count,string second_page_info[][])

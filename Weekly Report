@@ -1,0 +1,51 @@
+
+
+#Weekly Plan for Execution of the Project:
+
+To make NT 1.0, we had total of 14 weeks. It started from 
+planning the product and executing the whole idea into a working model.
+
+Week 1:
+       We considered number of different ideas to make a successful project for our semester. 
+	   Then, we come up with tracking the nutrition of a person which will help any person to have a balanced diet through a hardware device.
+	   We named it Nutritional Tracker.
+Week 2:
+       After the approval from professor, we were supposed to give a presentation with the idea of what
+	   hardware components we would use and which technology will be used. When come up with the idea of using Raspberry Pi zero.
+Week 3:
+       We constructed the full plan that how this device will work and who will work on what parts. The whole execution
+	   plan was ready and the work was divided into two sections. 
+Week 4:
+       Database was the basic building block on which the whole product will run. This product required specific 
+	   classification and that was collected from different sources first. Meanwhile, components were ordered for the hardware.
+Week 5:
+       Database of 400 different fruits and vegetables were collected. Raspberry pi was wirelessly connected to the laptop. 
+Week 6:
+       Hardware was the next step after this but we faced a struggle using RPI with camera scanning PLU codes.
+	   Different platforms were used to work out the OCR thing for our project but every try was in vain.
+Week 7:
+       When OCR part was not a successful venture, we ordered keypad for our RPI so that we can manually enter 
+	   the code for our device. Cross toolchain compilation was done and keypad was interfaced with RPI. 
+Week 8: 
+       In this week, software part has started. The idea was to use database through SQL workbench by connecting
+	   to eclipse but we faced some connectivity issues which was further resolved by Derek Molloy book.
+Week 9: 
+       In this week, xginx was connected to RPI and we tried basic codding to run the system. TCP/IP connection was tested in this week.
+Week 10:
+       pseudo code for the software integration was written. Beginning from the entering numbers, storing the codes,
+	   pulling data from the database, calculating using user data according to the database and executing it on a webpage through a server.
+Week 11:
+      html5 pages using css was prepared for the execution of the product was made. Then, the whole code was 
+	  converted into C++ code so that our eclipse can use it properly.
+Week 12:
+      Codes were complied, debugged and run to show the output. Simulation of the hardware and 
+	  software was a success. With a little bit difficulty, everything went according to requirements.
+Week 13: 
+       Prepared our project for the final presentation and execution. Assembled project into a hardware kit for presenting.
+Week 14:
+       Final Presentation.
+
+
+
+
+

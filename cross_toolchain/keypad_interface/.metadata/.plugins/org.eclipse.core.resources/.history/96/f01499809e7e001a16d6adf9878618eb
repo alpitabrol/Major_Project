@@ -1,0 +1,25 @@
+#include<iostream>
+
+using namespace std;
+int main()
+{
+cout<< "Content-type: text/html; charset=utf-8 \n\n"<<endl;
+//for style
+cout <<"<link rel =\"stylesheet\"; href=\"style.css\">" <<endl;
+cout<< "<html><body background-image: url(https://www.forumhealthcentre.nhs.uk/UserFiles/Thumbnails/Wellness_Health_Lifestyle/shutterstock_67699489_1__h1000_w500.jpg)>"<<endl;
+cout<< "<h1>NUTRITIONAL TRACKER </h1>"<<endl;
+cout<< "</div>"<<endl;
+cout<< "<div class=\"loginform cf\">"<<endl;
+cout << "<form name=\"login\" action=\"index_submit\" method=\"get\" accept-charset=\"utf-8\">"<<endl;
+cout<< "<ul>"<<endl;
+cout<< "<li>"<<endl;
+cout<< "<label for=\"username\">Username</label>"<<endl;
+cout<< "<input type=\"username\" name=\"username\" placeholder=\"Your Name\" required>"<<endl;
+cout<< "</li>"<<endl;
+cout<< "<input type=\"submit\" value=\"Login\"> "<<endl;
+cout<< "</li></ul></form></div>"<<endl;
+
+
+cout<< "</body></html>";
+return 0;
+}

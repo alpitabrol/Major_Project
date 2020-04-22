@@ -1,0 +1,33 @@
+!SESSION 2020-04-08 16:00:20.242 -----------------------------------------------
+eclipse.buildId=4.14.0.I20191210-0610
+java.version=11.0.6
+java.vendor=Ubuntu
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_CA
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.cdt.core 1 0 2020-04-08 16:20:40.192
+!MESSAGE Indexed 'test_project' (1 sources, 117 headers) in 12 sec: 9,736 declarations; 16,240 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+!SESSION 2020-04-14 16:41:20.040 -----------------------------------------------
+eclipse.buildId=4.14.0.I20191210-0610
+java.version=11.0.6
+java.vendor=Ubuntu
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_CA
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.cdt.core 1 0 2020-04-14 16:44:06.928
+!MESSAGE Indexed 'server_conn' (2 sources, 209 headers) in 13.2 sec: 16,044 declarations; 25,528 references; 0 unresolved inclusions; 0 syntax errors; 196 unresolved names (0.47%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2020-04-14 17:29:56.730
+!MESSAGE Indexed 'test' (2 sources, 174 headers) in 8.77 sec: 13,502 declarations; 21,338 references; 0 unresolved inclusions; 0 syntax errors; 4 unresolved names (0.011%)
+!SESSION 2020-04-14 20:01:30.567 -----------------------------------------------
+eclipse.buildId=4.14.0.I20191210-0610
+java.version=11.0.6
+java.vendor=Ubuntu
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_CA
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2020-04-14 20:01:57.665
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.

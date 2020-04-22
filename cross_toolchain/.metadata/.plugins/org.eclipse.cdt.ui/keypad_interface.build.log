@@ -1,0 +1,18 @@
+10:42:37 **** Incremental Build of configuration Debug for project keypad_interface ****
+make all 
+Building file: ../src/wiringPi.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -I/home/devil/Documents/tools/arm-bcm2708/arm-linux-gnueabihf/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/wiringPi.d" -MT"src/wiringPi.o" -o "src/wiringPi.o" "../src/wiringPi.c"
+Finished building: ../src/wiringPi.c
+ 
+Building target: keypad_interface
+Invoking: Cross G++ Linker
+arm-linux-gnueabihf-g++ -L/home/devil/Documents/tools/arm-bcm2708/arm-linux-gnueabihf/. -o "keypad_interface"  ./src/SocketClient.o ./src/main_prog_client.o ./src/piHiPri.o ./src/softPwm.o ./src/softTone.o ./src/wiringPi.o   -lpthread
+Finished building target: keypad_interface
+ 
+make --no-print-directory post-build
+scp keypad_interface pi@dex.local:/home/pi/client_conn
+ 
+
+10:42:39 Build Finished. 0 errors, 0 warnings. (took 2s.725ms)
+

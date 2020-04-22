@@ -1,0 +1,15 @@
+10:51:24 **** Incremental Build of configuration Debug for project server_conn ****
+make all 
+Building file: ../src/main_prog_server.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main_prog_server.d" -MT"src/main_prog_server.o" -o "src/main_prog_server.o" "../src/main_prog_server.cpp"
+Finished building: ../src/main_prog_server.cpp
+ 
+Building target: server_conn
+Invoking: Cross G++ Linker
+g++  -o "server_conn"  ./src/SocketServer.o ./src/html_page_2.o ./src/main_prog_server.o   
+Finished building target: server_conn
+ 
+
+10:51:25 Build Finished. 0 errors, 0 warnings. (took 1s.271ms)
+

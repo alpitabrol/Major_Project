@@ -1,0 +1,39 @@
+#include<iostream>
+
+using namespace std;
+int main()
+{
+cout<< "Content-type: text/html; charset=utf-8 \n\n"<<endl;
+//for style
+
+cout<<"<style> "<<endl;
+cout<<"html{ font-size: 10pt;} "<<endl;
+cout<<"body{ background-image: url(https://www.forumhealthcentre.nhs.uk/UserFiles/Thumbnails/Wellness_Health_Lifestyle/shutterstock_67699489_1__h1000_w500.jpg);} "<<endl;
+cout<<".loginform label{display: block; color: #999;}"<<endl;
+cout<<".cf :before,"<<endl;
+cout<<".cf:after{content:\"\";display: table;}"<<endl;
+cout<<".cf:after{clear:both;}"<<endl;
+cout<<".cf {*zoom:1;}"<<endl;
+cout<<":focus{outline:0;}"<<endl;
+cout<<".loginform{width:410px;margin:50px auto;padding:25px;background-color:#FFF8DC;border-radius:5px;box-shadow:0px 0px 5px 0px #DEB887;inset 0px 1px 0px 0px rgba(250,250,250,0.5);border:1px solid rgba(0,0,0,0.3);}"<<endl;
+
+
+
+cout<<"</style> "<<endl;
+cout<< "<html><body>"<<endl;
+cout<< "<h1>NUTRITIONAL TRACKER </h1>"<<endl;
+cout<< "</div>"<<endl;
+cout<< "<div class=\"loginform cf\">"<<endl;
+cout << "<form name=\"login\" action=\"index_submit\" method=\"get\" accept-charset=\"utf-8\">"<<endl;
+cout<< "<ul>"<<endl;
+cout<< "<li>"<<endl;
+cout<< "<label for=\"username\">Username</label>"<<endl;
+cout<< "<input type=\"username\" name=\"username\" placeholder=\"Your Name\" required>"<<endl;
+cout<< "</li>"<<endl;
+cout<< "<input type=\"submit\" value=\"Login\"> "<<endl;
+cout<< "</li></ul></form></div>"<<endl;
+
+
+cout<< "</body></html>";
+return 0;
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;keypad_interface/src/client.cpp&apos; to &apos;main_prog_client.cpp&apos;" description="Rename resource &apos;client.cpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/client.cpp" name="main_prog_client.cpp" stamp="1587133708283" updateReferences="true"/>
+</session>

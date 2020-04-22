@@ -1,0 +1,24 @@
+#include<iostream>
+
+using namespace std;
+int main()
+{
+cout<< "Content-type: text/html\n\n"<<endl;
+cout<< "<html><body>"<<endl;
+int i=0;
+
+cout<< "<h1>baby c++ chal pda </h1>"<<endl;
+
+cout<< "<div id=\"button\"><a href=\"test2\">Log In</a></div>";
+
+while(i<10)
+{
+	cout<< i<< "<br>"<<endl;
+i++;
+}
+cout<< "</body></html>";
+
+
+return 0;
+}
+
