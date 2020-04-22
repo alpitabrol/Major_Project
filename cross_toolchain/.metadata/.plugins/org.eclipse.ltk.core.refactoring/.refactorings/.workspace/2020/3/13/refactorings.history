@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Delete resource &apos;keypad_interface/src/GPIO.cpp&apos;" deleteContents="false" description="Delete resource &apos;keypad_interface/src/GPIO.cpp&apos;" element1="/keypad_interface/src/GPIO.cpp" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1585098881090"/>
-</session>

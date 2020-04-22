@@ -1,8 +1,0 @@
-connections/org.eclipse.remote.JSch/raspi_ssh_conn/JSCH_ADDRESS_ATTR=dex.local
-connections/org.eclipse.remote.JSch/raspi_ssh_conn/JSCH_IS_PASSWORD_ATTR=true
-connections/org.eclipse.remote.JSch/raspi_ssh_conn/JSCH_LOGIN_SHELL_COMMAND_ATTR=/bin/bash -l -c '{0}'
-connections/org.eclipse.remote.JSch/raspi_ssh_conn/JSCH_PORT_ATTR=22
-connections/org.eclipse.remote.JSch/raspi_ssh_conn/JSCH_TIMEOUT_ATTR=0
-connections/org.eclipse.remote.JSch/raspi_ssh_conn/JSCH_USERNAME_ATTR=pi
-connections/org.eclipse.remote.JSch/raspi_ssh_conn/JSCH_USE_LOGIN_SHELL_ATTR=true
-eclipse.preferences.version=1

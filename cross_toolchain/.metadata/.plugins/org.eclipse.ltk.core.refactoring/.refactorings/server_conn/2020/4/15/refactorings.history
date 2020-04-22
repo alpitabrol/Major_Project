@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;web_client_conn/src/web_client_conn.cpp&apos; to &apos;server_main.cpp&apos;" description="Rename resource &apos;web_client_conn.cpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/web_client_conn.cpp" name="server_main.cpp" stamp="1586384071280" updateReferences="true"/>
-</session>

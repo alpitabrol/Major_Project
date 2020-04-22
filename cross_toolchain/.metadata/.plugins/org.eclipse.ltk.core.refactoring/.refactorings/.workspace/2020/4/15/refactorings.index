@@ -1,6 +1,0 @@
-1586384182422	Delete resource 'keypad_interface/src/client_main'
-1586384310235	Rename resource 'web_client_conn'
-1586385884640	Delete resource 'keypad_interface/src/SocketServer.h'
-1586385952407	Delete resource 'server_conn/src/SocketServer.h'
-1586488471883	Delete resource 'keypad_interface/src/keypad_interface.cpp'
-1586568738671	Delete resource 'server_conn/src/data_import_file.cpp'
