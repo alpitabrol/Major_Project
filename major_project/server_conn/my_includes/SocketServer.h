@@ -10,18 +10,18 @@ namespace exploringRPi {
 
 class SocketServer {
 private:
-   int     portNumber;
-   int     socketfd, clientSocketfd;
-   struct  sockaddr_in   serverAddress;
-   struct  sockaddr_in   clientAddress;
-   bool	   clientConnected;
+	int portNumber;
+	int socketfd, clientSocketfd;
+	struct sockaddr_in serverAddress;
+	struct sockaddr_in clientAddress;
+	bool clientConnected;
 
 public:
-   SocketServer(int portNumber);
-   virtual int listen();
-   virtual int send(std::string message);
-   virtual std::string receive(int size);
-   virtual ~SocketServer();
+	SocketServer(int portNumber);
+	virtual int listen();
+	virtual int send(std::string message);
+	virtual std::string receive(int size);
+	virtual ~SocketServer();
 };
 
 } /* namespace exploringRPi */

@@ -114,11 +114,10 @@
 #define	PI_MAKER_EMBEST		2
 #define	PI_MAKER_UNKNOWN	3
 
-extern const char *piModelNames    [20] ;
-extern const char *piRevisionNames [16] ;
-extern const char *piMakerNames    [16] ;
-extern const int   piMemorySize    [ 8] ;
-
+extern const char *piModelNames[20];
+extern const char *piRevisionNames[16];
+extern const char *piMakerNames[16];
+extern const int piMemorySize[8];
 
 //	Intended for the GPIO program Use at your own risk.
 
@@ -131,7 +130,6 @@ extern const int   piMemorySize    [ 8] ;
 #define	WPI_FATAL	(1==1)
 #define	WPI_ALMOST	(1==2)
 
-
 // wiringPiNodeStruct:
 //	This describes additional device nodes in the extended wiringPi
 //	2.0 scheme of things.
@@ -140,41 +138,39 @@ extern const int   piMemorySize    [ 8] ;
 //	of more than 1 or 2 devices being added are fairly slim, so who
 //	knows....
 
-struct wiringPiNodeStruct
-{
-  int     pinBase ;
-  int     pinMax ;
+struct wiringPiNodeStruct {
+	int pinBase;
+	int pinMax;
 
-  int          fd ;	// Node specific
-  unsigned int data0 ;	//  ditto
-  unsigned int data1 ;	//  ditto
-  unsigned int data2 ;	//  ditto
-  unsigned int data3 ;	//  ditto
+	int fd;	// Node specific
+	unsigned int data0;	//  ditto
+	unsigned int data1;	//  ditto
+	unsigned int data2;	//  ditto
+	unsigned int data3;	//  ditto
 
-           void   (*pinMode)          (struct wiringPiNodeStruct *node, int pin, int mode) ;
-           void   (*pullUpDnControl)  (struct wiringPiNodeStruct *node, int pin, int mode) ;
-           int    (*digitalRead)      (struct wiringPiNodeStruct *node, int pin) ;
+	void (*pinMode)(struct wiringPiNodeStruct *node, int pin, int mode);
+	void (*pullUpDnControl)(struct wiringPiNodeStruct *node, int pin, int mode);
+	int (*digitalRead)(struct wiringPiNodeStruct *node, int pin);
 //unsigned int    (*digitalRead8)     (struct wiringPiNodeStruct *node, int pin) ;
-           void   (*digitalWrite)     (struct wiringPiNodeStruct *node, int pin, int value) ;
+	void (*digitalWrite)(struct wiringPiNodeStruct *node, int pin, int value);
 //         void   (*digitalWrite8)    (struct wiringPiNodeStruct *node, int pin, int value) ;
-           void   (*pwmWrite)         (struct wiringPiNodeStruct *node, int pin, int value) ;
-           int    (*analogRead)       (struct wiringPiNodeStruct *node, int pin) ;
-           void   (*analogWrite)      (struct wiringPiNodeStruct *node, int pin, int value) ;
+	void (*pwmWrite)(struct wiringPiNodeStruct *node, int pin, int value);
+	int (*analogRead)(struct wiringPiNodeStruct *node, int pin);
+	void (*analogWrite)(struct wiringPiNodeStruct *node, int pin, int value);
 
-  struct wiringPiNodeStruct *next ;
-} ;
+	struct wiringPiNodeStruct *next;
+};
 
-extern struct wiringPiNodeStruct *wiringPiNodes ;
+extern struct wiringPiNodeStruct *wiringPiNodes;
 
 // Export variables for the hardware pointers
 
-extern volatile unsigned int *_wiringPiGpio ;
-extern volatile unsigned int *_wiringPiPwm ;
-extern volatile unsigned int *_wiringPiClk ;
-extern volatile unsigned int *_wiringPiPads ;
-extern volatile unsigned int *_wiringPiTimer ;
-extern volatile unsigned int *_wiringPiTimerIrqRaw ;
-
+extern volatile unsigned int *_wiringPiGpio;
+extern volatile unsigned int *_wiringPiPwm;
+extern volatile unsigned int *_wiringPiClk;
+extern volatile unsigned int *_wiringPiPads;
+extern volatile unsigned int *_wiringPiTimer;
+extern volatile unsigned int *_wiringPiTimerIrqRaw;
 
 // Function prototypes
 //	c++ wrappers thanks to a comment by Nick Lott
@@ -188,77 +184,78 @@ extern "C" {
 
 // Internal
 
-extern int wiringPiFailure (int fatal, const char *message, ...) ;
+extern int wiringPiFailure(int fatal, const char *message, ...);
 
 // Core wiringPi functions
 
-extern struct wiringPiNodeStruct *wiringPiFindNode (int pin) ;
-extern struct wiringPiNodeStruct *wiringPiNewNode  (int pinBase, int numPins) ;
+extern struct wiringPiNodeStruct* wiringPiFindNode(int pin);
+extern struct wiringPiNodeStruct* wiringPiNewNode(int pinBase, int numPins);
 
-extern void wiringPiVersion	(int *major, int *minor) ;
-extern int  wiringPiSetup       (void) ;
-extern int  wiringPiSetupSys    (void) ;
-extern int  wiringPiSetupGpio   (void) ;
-extern int  wiringPiSetupPhys   (void) ;
+extern void wiringPiVersion(int *major, int *minor);
+extern int wiringPiSetup(void);
+extern int wiringPiSetupSys(void);
+extern int wiringPiSetupGpio(void);
+extern int wiringPiSetupPhys(void);
 
-extern          void pinModeAlt          (int pin, int mode) ;
-extern          void pinMode             (int pin, int mode) ;
-extern          void pullUpDnControl     (int pin, int pud) ;
-extern          int  digitalRead         (int pin) ;
-extern          void digitalWrite        (int pin, int value) ;
-extern unsigned int  digitalRead8        (int pin) ;
-extern          void digitalWrite8       (int pin, int value) ;
-extern          void pwmWrite            (int pin, int value) ;
-extern          int  analogRead          (int pin) ;
-extern          void analogWrite         (int pin, int value) ;
+extern void pinModeAlt(int pin, int mode);
+extern void pinMode(int pin, int mode);
+extern void pullUpDnControl(int pin, int pud);
+extern int digitalRead(int pin);
+extern void digitalWrite(int pin, int value);
+extern unsigned int digitalRead8(int pin);
+extern void digitalWrite8(int pin, int value);
+extern void pwmWrite(int pin, int value);
+extern int analogRead(int pin);
+extern void analogWrite(int pin, int value);
 
 // PiFace specifics
 //	(Deprecated)
 
-extern int  wiringPiSetupPiFace (void) ;
-extern int  wiringPiSetupPiFaceForGpioProg (void) ;	// Don't use this - for gpio program only
+extern int wiringPiSetupPiFace(void);
+extern int wiringPiSetupPiFaceForGpioProg(void);// Don't use this - for gpio program only
 
 // On-Board Raspberry Pi hardware specific stuff
 
-extern          int  piGpioLayout        (void) ;
-extern          int  piBoardRev          (void) ;	// Deprecated
-extern          void piBoardId           (int *model, int *rev, int *mem, int *maker, int *overVolted) ;
-extern          int  wpiPinToGpio        (int wpiPin) ;
-extern          int  physPinToGpio       (int physPin) ;
-extern          void setPadDrive         (int group, int value) ;
-extern          int  getAlt              (int pin) ;
-extern          void pwmToneWrite        (int pin, int freq) ;
-extern          void pwmSetMode          (int mode) ;
-extern          void pwmSetRange         (unsigned int range) ;
-extern          void pwmSetClock         (int divisor) ;
-extern          void gpioClockSet        (int pin, int freq) ;
-extern unsigned int  digitalReadByte     (void) ;
-extern unsigned int  digitalReadByte2    (void) ;
-extern          void digitalWriteByte    (int value) ;
-extern          void digitalWriteByte2   (int value) ;
+extern int piGpioLayout(void);
+extern int piBoardRev(void);	// Deprecated
+extern void piBoardId(int *model, int *rev, int *mem, int *maker,
+		int *overVolted);
+extern int wpiPinToGpio(int wpiPin);
+extern int physPinToGpio(int physPin);
+extern void setPadDrive(int group, int value);
+extern int getAlt(int pin);
+extern void pwmToneWrite(int pin, int freq);
+extern void pwmSetMode(int mode);
+extern void pwmSetRange(unsigned int range);
+extern void pwmSetClock(int divisor);
+extern void gpioClockSet(int pin, int freq);
+extern unsigned int digitalReadByte(void);
+extern unsigned int digitalReadByte2(void);
+extern void digitalWriteByte(int value);
+extern void digitalWriteByte2(int value);
 
 // Interrupts
 //	(Also Pi hardware specific)
 
-extern int  waitForInterrupt    (int pin, int mS) ;
-extern int  wiringPiISR         (int pin, int mode, void (*function)(void)) ;
+extern int waitForInterrupt(int pin, int mS);
+extern int wiringPiISR(int pin, int mode, void (*function)(void));
 
 // Threads
 
-extern int  piThreadCreate      (void *(*fn)(void *)) ;
-extern void piLock              (int key) ;
-extern void piUnlock            (int key) ;
+extern int piThreadCreate(void* (*fn)(void*));
+extern void piLock(int key);
+extern void piUnlock(int key);
 
 // Schedulling priority
 
-extern int piHiPri (const int pri) ;
+extern int piHiPri(const int pri);
 
 // Extras from arduino land
 
-extern void         delay             (unsigned int howLong) ;
-extern void         delayMicroseconds (unsigned int howLong) ;
-extern unsigned int millis            (void) ;
-extern unsigned int micros            (void) ;
+extern void delay(unsigned int howLong);
+extern void delayMicroseconds(unsigned int howLong);
+extern unsigned int millis(void);
+extern unsigned int micros(void);
 
 #ifdef __cplusplus
 }

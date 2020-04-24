@@ -11,13 +11,12 @@ namespace exploringRPi {
 
 class SocketClient {
 
-
-    int 	    socketfd;
-    struct 	    sockaddr_in   serverAddress;
-    struct 	    hostent       *server;
-    std::string serverName;
-    int         portNumber;
-    bool        isConnected;
+	int socketfd;
+	struct sockaddr_in serverAddress;
+	struct hostent *server;
+	std::string serverName;
+	int portNumber;
+	bool isConnected;
 
 public:
 	SocketClient(std::string serverName, int portNumber);
@@ -25,7 +24,9 @@ public:
 	virtual int disconnectFromServer();
 	virtual int send(std::string message);
 	virtual std::string receive(int size);
-	bool isClientConnected() { return this->isConnected; }
+	bool isClientConnected() {
+		return this->isConnected;
+	}
 	virtual ~SocketClient();
 };
 
